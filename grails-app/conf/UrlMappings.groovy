@@ -7,8 +7,10 @@ class UrlMappings {
             }
         }
 
-        "/"(controller: "main", view: "/index")
-
+        "/"(view:"/index")
         "500"(view: '/error')
+
+        "/users"(resources: 'user')
+        "/frames"(resources: 'frame')
     }
 }
