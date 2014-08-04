@@ -6,7 +6,7 @@ class Frame {
     String name
     String streamSource
     int height
-    int weight
+    int width
     int positionX
     int positionY
 
