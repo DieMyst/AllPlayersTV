@@ -1,0 +1,6 @@
+<div ng-repeat="frame in frames">
+    <div class="outer" ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+        <iframe frameborder="0" ng-src="{{frame.streamSource}}">
+        </iframe>
+    </div>
+</div>

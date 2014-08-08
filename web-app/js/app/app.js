@@ -3,15 +3,15 @@
 /* App Module */
 
 var playersApp = angular.module('playersApp', [
-  'ngRoute',
+  'ngRoute'
 ]);
 
 phonecatApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/frames/:user', {
-        templateUrl: '', //todo page
-        controller: ''
+        templateUrl: 'partials/frames.html', //todo page
+        controller: 'FramesCtrl'
       }).
       otherwise({
         redirectTo: '/phones' //todo

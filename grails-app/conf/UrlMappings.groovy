@@ -12,5 +12,6 @@ class UrlMappings {
 
         "/users"(resources: 'user')
         "/frames"(resources: 'frame')
+        "/frames/$id"
     }
 }

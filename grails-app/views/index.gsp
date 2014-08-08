@@ -4,10 +4,12 @@
 	<head>
         <asset:stylesheet src="main.css"/>
         <asset:javascript src="application.js"/>
+        <asset:javascript src="angular.js"/>
+        <asset:javascript src="angular-resource.js"/>
 	</head>
 	<body>
-        <g:each var="f" in="${Frame.all}">
-            <fr:iFrame frame="${f}"/>
-        </g:each>
+        <div ng-app="framesApp">
+            <div ng-view/>
+        </div>
 	</body>
 </html>
