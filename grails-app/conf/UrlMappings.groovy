@@ -7,11 +7,11 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(view: "/index")
         "500"(view: '/error')
 
-        "/users"(resources: 'user')
         "/frames"(resources: 'frame')
-        "/frames/$id"
+        "/user/$login"(controller: 'user',
+                action: 'showUser')
     }
 }

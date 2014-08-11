@@ -1,3 +1,4 @@
+import grails.converters.JSON
 import tv.allplayers.Frame
 import tv.allplayers.User
 
@@ -16,6 +17,40 @@ class BootStrap {
         user.addToFrames(frame2)
         user.addToFrames(frame4)
         user.save()
+
+        User user2 = new User(login: "diemust", password: "hey")
+        //Frame frame1 = new Frame(name: 'twitch1', height: 378, streamSource: 'http://www.twitch.tv/aui_2000', width: 620, positionX: 1, positionY: 20)
+        /*<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=aui_2000" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=aui_2000&auto_play=true&start_volume=25" /></object>*/
+        Frame frame5 = new Frame(name: 'gg2', height: 450, streamSource: 'http://www.goodgame.ru/player.php?1717', width: 800, positionX: 70, positionY: 600)
+        Frame frame6 = new Frame(name: 'gg3', height: 450, streamSource: 'http://www.goodgame.ru/player.php?1717', width: 800, positionX: 170, positionY: 600)
+        Frame frame7 = new Frame(name: 'gg4', height: 450, streamSource: 'http://goodgame.ru/chat/Abver', width: 100, positionX: 770, positionY: 300)
+        //как узнавать id стримера?
+        /*<iframe frameborder="0" width="800" height="450" src="http://www.goodgame.ru/player.php?1717"></iframe>*/
+        user2.addToFrames(frame5)
+        user2.addToFrames(frame6)
+        user2.addToFrames(frame7)
+        user2.save()
+
+        JSON.registerObjectMarshaller(User) { User jUser ->
+            return [
+                    login: jUser.login,
+                    password: jUser.password,
+                    frames: jUser.frames
+            ]
+        }
+
+        JSON.registerObjectMarshaller(Frame) { Frame frame ->
+            return [
+                    name: frame.name,
+                    streamSource: frame.streamSource,
+                    height: frame.height,
+                    width: frame.width,
+                    positionX: frame.positionX,
+                    positionY: frame.positionY
+            ]
+
+        }
+
     }
     def destroy = {
     }

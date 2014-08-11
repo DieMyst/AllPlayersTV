@@ -20,11 +20,11 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.11">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.11/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.11/grails-app/controllers" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.11/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.11/grails-app/taglib" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/grails-app/controllers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.7">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.7/src/java" isTestSource="false" />
@@ -38,6 +38,9 @@
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/hibernate4-4.3.5.4">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/hibernate4-4.3.5.4/src/java" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/httplogger-1.1">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/httplogger-1.1/src/java" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2/src/java" isTestSource="false" />

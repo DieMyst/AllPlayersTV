@@ -1,14 +1,16 @@
 package tv.allplayers
 
-import grails.rest.RestfulController
+import grails.converters.JSON
 
-class UserController extends RestfulController {
+class UserController {
 
-    static responseFormats = ['json', 'xml']
-
-    UserController() {
-        super(User)
+    def index() {
+        def json = User.list() as JSON
+        render json
     }
 
-
+    def showUser() {
+        def json = User.findByLogin(params.login) as JSON
+        render json
+    }
 }

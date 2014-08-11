@@ -2,13 +2,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <asset:stylesheet src="main.css"/>
-        <asset:javascript src="application.js"/>
-        <asset:javascript src="angular.js"/>
-        <asset:javascript src="angular-resource.js"/>
+
 	</head>
 	<body>
-        <div ng-app="framesApp">
+        <div ng-app="playerApp">
             <div ng-view/>
         </div>
 	</body>

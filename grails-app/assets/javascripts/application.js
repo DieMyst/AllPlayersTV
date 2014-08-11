@@ -1,5 +1,11 @@
 //= require jquery-2.1.1.js
 //= require jquery-ui.min.js
+//= require angular.js
+//= require angular-route.js
+//= require controllers.js
+//= require services.js
+//= require app.js
+
 $(document).ready (
     function() {
         $(".outer").resizable({
@@ -10,5 +16,5 @@ $(document).ready (
             }
         }).draggable();
     }
-)
+);
 
