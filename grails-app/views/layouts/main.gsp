@@ -4,11 +4,18 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-	<head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <asset:stylesheet src="main"/>
     <asset:javascript src="application"/>
-	</head>
-	<body>
-		<g:layoutBody/>
-	</body>
+    <asset:javascript src="ui-app"/>
+</head>
+
+<body>
+<div ng-app="playerApp">
+    <div ng-view/>
+</div>
+<g:layoutBody/>
+</body>
 </html>

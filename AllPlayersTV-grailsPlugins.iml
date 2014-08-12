@@ -20,6 +20,10 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://$MODULE_DIR$/target/work/plugins/angular-template-asset-pipeline-1.2.5">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/angular-template-asset-pipeline-1.2.5/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/angular-template-asset-pipeline-1.2.5/grails-app/i18n" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.4/grails-app/controllers" isTestSource="false" />
@@ -87,6 +91,7 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/7.0.53/tomcat-embed-el-7.0.53.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.53/tomcat-embed-jasper-7.0.53.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.53/tomcat-catalina-ant-7.0.53.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/htmlcompressor/htmlcompressor/1.5.2/htmlcompressor-1.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

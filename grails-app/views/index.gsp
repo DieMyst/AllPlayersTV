@@ -1,12 +1,9 @@
-<%@ page import="tv.allplayers.Frame" %>
 <!DOCTYPE html>
 <html>
 	<head>
-
+        <meta name="layout" content="main"/>
 	</head>
 	<body>
-        <div ng-app="playerApp">
-            <div ng-view/>
-        </div>
+
 	</body>
 </html>

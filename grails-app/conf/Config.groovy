@@ -34,6 +34,8 @@ grails.mime.types = [ // the first one is the default format
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
+grails.converters.json.default.deep = true
+
 // Legacy setting for codec used to encode data with ${}
 grails.views.default.codec = "html"
 

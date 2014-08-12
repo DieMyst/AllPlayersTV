@@ -11,7 +11,7 @@ class UrlMappings {
         "500"(view: '/error')
 
         "/frames"(resources: 'frame')
-        "/user/$login"(controller: 'user',
+        "/user/$login"(controller: 'player',
                 action: 'showUser')
     }
 }

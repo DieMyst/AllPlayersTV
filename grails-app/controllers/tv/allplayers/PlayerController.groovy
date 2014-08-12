@@ -2,7 +2,7 @@ package tv.allplayers
 
 import grails.converters.JSON
 
-class UserController {
+class PlayerController {
 
     def index() {
         def json = User.list() as JSON
