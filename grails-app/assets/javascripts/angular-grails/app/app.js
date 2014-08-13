@@ -23,7 +23,7 @@ playerApp.config(['$routeProvider',
                 templateUrl: 'frames.html',
                 controller: 'FramesCtrl'
             }).
-            when('/user/:user', {
+            when('/user/:login', {
                 templateUrl: 'frames.html',
                 controller: 'FramesCtrl'
             }).

@@ -4,8 +4,7 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
-playerControllers.controller('FramesCtrl', ['$scope', 'User',
-    function ($scope, User) {
-        $scope.user = User.query()
+playerControllers.controller('FramesCtrl', ['$scope', '$routeParams', 'User',
+    function ($scope, $routeParams, User) {
+        $scope.user = User.get({login: $routeParams.login});
     }]);
-
