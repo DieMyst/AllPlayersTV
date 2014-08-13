@@ -12,6 +12,7 @@
 
 var playerApp = angular.module('playerApp', [
     'ngRoute',
+    'ngSanitize',
     'playerControllers',
     'playerServices'
 ]);

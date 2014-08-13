@@ -66,7 +66,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
         runtime ":database-migration:1.4.0"
         runtime ":angular-template-asset-pipeline:1.2.5"
-        compile ":httplogger:1.1"
         //runtime ":jquery:1.11.1"
 
         // Uncomment these to enable additional asset-pipeline capabilities
