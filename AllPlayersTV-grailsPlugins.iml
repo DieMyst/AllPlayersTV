@@ -43,9 +43,6 @@
     <content url="file://$MODULE_DIR$/target/work/plugins/hibernate4-4.3.5.4">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/hibernate4-4.3.5.4/src/java" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/target/work/plugins/httplogger-1.1">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/httplogger-1.1/src/java" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2/src/groovy" isTestSource="false" />
@@ -91,6 +88,7 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/7.0.53/tomcat-embed-el-7.0.53.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.53/tomcat-embed-jasper-7.0.53.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.53/tomcat-catalina-ant-7.0.53.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/htmlcompressor/htmlcompressor/1.5.2/htmlcompressor-1.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

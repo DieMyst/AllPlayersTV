@@ -3,6 +3,7 @@
 //= require_self
 //= require controllers
 //= require services
+//= require directives
 //= require_self
 //= require_tree player-app
 
@@ -14,7 +15,8 @@ var playerApp = angular.module('playerApp', [
     'ngRoute',
     'ngSanitize',
     'playerControllers',
-    'playerServices'
+    'playerServices',
+    'playerDirectives'
 ]);
 
 playerApp.config(['$routeProvider',

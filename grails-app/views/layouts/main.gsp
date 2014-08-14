@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <asset:stylesheet src="main"/>
+    <asset:stylesheet src="jquery-ui.min.css"/>
     <asset:javascript src="application"/>
     <asset:javascript src="ui-app"/>
 </head>
