@@ -1,0 +1,20 @@
+<form ng-submit="submit()">
+    <div class="modal-body">
+        <label>Name
+            <input type="text" ng-model="composition.frame.name"/>
+        </label>
+        <label>SourceType
+            <select ng-model="composition.frame.sourceType">
+                <option>GG</option>
+                <option>Twitch</option>
+            </select>
+        </label>
+        <label>Source
+            <input type="text" ng-model="composition.frame.streamSource"/>
+        </label>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        <input type="submit" class="btn primary-btn" value="Submit" />
+    </div>
+</form>

@@ -16,7 +16,8 @@ var playerApp = angular.module('playerApp', [
     'ngSanitize',
     'playerControllers',
     'playerServices',
-    'playerDirectives'
+    'playerDirectives',
+    'ui.bootstrap'
 ]);
 
 playerApp.config(['$routeProvider',

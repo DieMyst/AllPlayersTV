@@ -9,13 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <asset:stylesheet src="main"/>
     <asset:stylesheet src="jquery-ui.min.css"/>
+    <asset:stylesheet src="bootstrap-combined.min.css"/>
     <asset:javascript src="application"/>
     <asset:javascript src="ui-app"/>
 </head>
 
 <body>
 <div ng-app="playerApp">
-    <div ng-view/>
+    <div ng-view></div>
 </div>
 <g:layoutBody/>
 </body>
