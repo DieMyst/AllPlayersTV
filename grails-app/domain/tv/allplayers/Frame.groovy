@@ -1,7 +1,7 @@
 package tv.allplayers
 
 class Frame {
-    static belongsTo = [user: User]
+    static belongsTo = [composition: Composition]
 
     String name
     String streamSource

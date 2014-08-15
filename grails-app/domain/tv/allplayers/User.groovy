@@ -1,7 +1,7 @@
 package tv.allplayers
 
 class User {
-    static hasMany = [frames: Frame]
+    static hasMany = [compositions: Composition]
 
     String login
     String password
