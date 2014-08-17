@@ -1,18 +1,19 @@
-<form ng-submit="submit()">
+<form ng-submit="submit(newFrame)">
     <div class="modal-body">
         <label>Name
-            <input type="text" ng-model="composition.frame.name"/>
+            <input type="text" ng-model="newFrame.frameName"/>
         </label>
         <label>SourceType
-            <select ng-model="composition.frame.sourceType">
+            <select ng-model="newFrame.sourceType">
                 <option>GG</option>
                 <option>Twitch</option>
             </select>
         </label>
         <label>Source
-            <input type="text" ng-model="composition.frame.streamSource"/>
+            <input type="text" ng-model="newFrame.streamSource"/>
         </label>
     </div>
+    <span>{{newFrame}}</span>
     <div class="modal-footer">
         <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
         <input type="submit" class="btn primary-btn" value="Submit" />

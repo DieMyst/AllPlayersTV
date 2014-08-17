@@ -9,29 +9,28 @@ playerControllers.controller('FramesCtrl', ['$scope', '$routeParams', 'User',
         $scope.user = User.get({login: $routeParams.login});
     }]);
 
-playerControllers.controller('MainCtrl', function ($scope, $sce, $modal) {
+playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log) {
     $scope.trustSrc = function (src) {
         return $sce.trustAsResourceUrl(src);
     };
-
     $scope.open = function () {
-
-        $modal.open({
+        var addFrameForm = $modal.open({
             templateUrl: 'modal-add-frame.html',
             backdrop: true,
             windowClass: 'modal',
             controller: function ($scope, $modalInstance) {
-                $scope.submit = function () {
-                    //todo add frame
-                    $modalInstance.dismiss('cancel');
+                $scope.submit = function (newFrame) {
+                    $modalInstance.close(newFrame);
                 };
                 $scope.cancel = function () {
-                    //$modalInstance.dismiss('cancel');
+                    $modalInstance.dismiss('cancel');
                 };
-            },
-            resolve: {
-
             }
         });
+        var res = addFrameForm.result.then(function (newFrame) {
+            $scope.composition = $scope.composition.concat(newFrame);
+            $log.info($scope.newFrame);
+        });
     };
+    $log.info($scope);
 });
