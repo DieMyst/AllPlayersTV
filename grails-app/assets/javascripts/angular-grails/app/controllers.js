@@ -4,12 +4,8 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
-playerControllers.controller('FramesCtrl', ['$scope', '$routeParams', 'User',
-    function ($scope, $routeParams, User) {
-        $scope.user = User.get({login: $routeParams.login});
-    }]);
-
-playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log) {
+playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, User) {
+    $scope.user = User.get({login: $routeParams.login});
     $scope.trustSrc = function (src) {
         return $sce.trustAsResourceUrl(src);
     };
@@ -28,7 +24,11 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log) {
             }
         });
         var res = addFrameForm.result.then(function (newFrame) {
-            $scope.composition = $scope.composition.concat(newFrame);
+            newFrame.height = 100;
+            newFrame.width = 200;
+            newFrame.positionX = 0;
+            newFrame.positionY = 0;
+            $scope.currentComp.frames = $scope.currentComp.frames.concat(newFrame);
             $log.info($scope.newFrame);
         });
     };
