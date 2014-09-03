@@ -7,7 +7,8 @@ HABAHABAHABA
         <select ng-options="comp.name for comp in user.compositions" ng-model="currentComp"></select>
     </label>
 
-    <div resizable-draggable ng-repeat="frame in currentComp.frames" class="outer" ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+    <div ng-repeat="frame in currentComp.frames" class="outer" ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
         <iframe frameborder="0" src="{{trustSrc(frame.streamSource)}}" ng-style="{'width':frame.width - 30, 'height':frame.height - 30}">
         </iframe>
+        <div resizable-draggable class="bar"></div>
     </div>
