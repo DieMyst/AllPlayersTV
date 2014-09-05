@@ -7,8 +7,10 @@ HABAHABAHABA
         <select ng-options="comp.name for comp in user.compositions" ng-model="currentComp"></select>
     </label>
 
-    <div ng-repeat="frame in currentComp.frames" class="outer" ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
-        <iframe frameborder="0" src="{{trustSrc(frame.streamSource)}}" ng-style="{'width':frame.width - 30, 'height':frame.height - 30}">
+    <div ng-repeat="frame in currentComp.frames" class="outer"  >
+        <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0" ng-src="{{trustSrc(frame.streamSource)}}"
+                ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
         </iframe>
-        <div resizable-draggable class="bar"></div>
+        <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
+             ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}"></div>
     </div>

@@ -2,27 +2,41 @@
 
 var playerDirectives = angular.module('playerDirectives', []);
 
+var z = 3;
+
 playerDirectives.directive('resizableDraggable', function () {
 
     var resizableConfig = {
         resize: function (event, ui) {
-            var newWd = ui.size.width - 30;
-            var newHt = ui.size.height - 30;
-            $(this).parent().width(newWd).height(newHt);
-            $(this).parent().find("iframe").width(newWd).height(newHt);
+            var newWd = ui.size.width;
+            var newHt = ui.size.height;
+            var frameId = "#" + this.id.replace("edit", "frame");
+            var frame = $(frameId);
+            frame.width(newWd).height(newHt);
         }
     };
 
     var draggableConfig = {
+        start: function () {
+            var frameId = "#" + this.id.replace("edit", "frame");
+            var frame = $(frameId);
+
+            frame.addClass('top').removeClass('bottom');
+            frame.siblings().removeClass('top').addClass('bottom');
+            frame.css("z-index", z);
+
+            $(this).addClass('top').removeClass('bottom');
+            $(this).siblings().removeClass('top').addClass('bottom');
+            $(this).css("z-index", z++);
+        },
         drag: function (event, ui) {
             var posLeft = ui.position.left;
             var posTop = ui.position.top;
 
-            var parentEl = $(this).parent();
-            var parentPosTop = parentEl.position().top;
-            var parentPosLeft = parentEl.position().left;
-            parentEl.css({top:  parentPosTop + posTop, left: parentPosLeft + posLeft});
-            $(this).css({top: 0, left: 0});
+            var frameId = "#" + this.id.replace("edit", "frame");
+            var frame = $(frameId);
+
+            frame.css({top:  posTop, left: posLeft});
         }
     };
 

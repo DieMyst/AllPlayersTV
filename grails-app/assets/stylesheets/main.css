@@ -1,15 +1,13 @@
 iframe {
     display: block;
-    position:relative;
+    position:absolute;
     padding: 0;
     border: none;
-    top: 15px;
-    left: 15px;
+    top: 0;
+    left: 0;
 }
 .outer {
-    position: absolute;
     display:block;
-    background-color:yellow;
 }
 .bar {
     position: absolute;
@@ -22,4 +20,10 @@ iframe {
 }
 .ui-resizable {
     position: absolute;
+}
+.ontop{
+    z-index: 2;
+}
+.onbottom {
+    z-index: 1;
 }
