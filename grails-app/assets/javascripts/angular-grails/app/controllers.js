@@ -4,9 +4,9 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
-playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, User) {
+playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, FullJson) {
     $scope.editable = true;
-    $scope.user = User.get({login: $routeParams.login});
+    $scope.fullJson = FullJson.get({login: $routeParams.login});
     $scope.trustSrc = function (src) {
         return $sce.trustAsResourceUrl(src);
     };
@@ -25,10 +25,13 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
         }
     };
     $scope.open = function() {
+        var scope = $rootScope.$new();
+        scope.sources = $scope.fullJson.sources;
         var addFrameForm = $modal.open({
             templateUrl: 'modal-add-frame.html',
             backdrop: true,
             windowClass: 'modal',
+            scope: scope,
             controller: function ($scope, $modalInstance) {
                 $scope.submit = function (newFrame) {
                     if (newFrame != null) {
@@ -46,7 +49,6 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             newFrame.positionX = 0;
             newFrame.positionY = 0;
             $scope.currentComp.frames = $scope.currentComp.frames.concat(newFrame);
-            $log.info($scope.newFrame);
         });
     };
     $log.info($scope);

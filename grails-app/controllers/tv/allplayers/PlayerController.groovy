@@ -1,6 +1,7 @@
 package tv.allplayers
 
 import grails.converters.JSON
+import org.codehaus.groovy.grails.web.json.JSONObject
 
 class PlayerController {
 
@@ -10,7 +11,12 @@ class PlayerController {
     }
 
     def showUser() {
-        def json = User.findByLogin(params.login) as JSON
-        render json
+        JSONObject combined = new JSONObject();
+        def userJson = User.findByLogin(params.login)
+        def sourcesJson = Sources.getSources();
+        combined.put("user", userJson)
+        combined.put("sources", sourcesJson)
+        println(combined)
+        render combined as JSON
     }
 }
