@@ -48,6 +48,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             newFrame.width = 200;
             newFrame.positionX = 0;
             newFrame.positionY = 0;
+            newFrame.sourceType = newFrame.sourceType.value;
             $scope.currentComp.frames = $scope.currentComp.frames.concat(newFrame);
         });
     };
