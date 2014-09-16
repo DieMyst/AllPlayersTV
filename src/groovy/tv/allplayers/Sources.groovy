@@ -1,19 +1,18 @@
 package tv.allplayers
-
-import grails.converters.JSON
-
 /**
  * by DShahtarin on 15.09.2014.
  */
 class Sources {
-    private static def sourcesMap = [:]
+    int value
+    String source
+    private static def sourcesList = []
 
     static {
-        sourcesMap["TWITCH"] = "Twitch"
-        sourcesMap["GG"] = "GoodGame"
-        sourcesMap["CYBERGAME"] = "Cybergame"
+        sourcesList.add(new Sources(value: 0, source: "Twitch"))
+        sourcesList.add(new Sources(value: 1, source: "GoodGame"))
+        sourcesList.add(new Sources(value: 2, source: "Twitch"))
     }
-    public static Map getSources() {
-        sourcesMap
+    public static def getSources() {
+        sourcesList
     }
 }
