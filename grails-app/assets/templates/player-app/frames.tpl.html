@@ -47,6 +47,18 @@
                 </iframe>
             </ANY>
         </ANY>
+        <ANY ng-switch-when="2">
+            <ANY ng-if="frame.type == 'stream'">
+                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0" ng-src="{{trustSrc('http://api.cybergame.tv/p/embed.php?c='+frame.streamSource+'&w=200pc&h=100pc&type=embed')}}"
+                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+                </iframe>
+            </ANY>
+            <ANY ng-if="frame.type == 'chat'">
+                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0" ng-src="{{trustSrc('http://cybergame.tv/cgchat.htm?v=b#'+frame.streamSource)}}"
+                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+                </iframe>
+            </ANY>
+        </ANY>
     </ANY>
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}"></div>
