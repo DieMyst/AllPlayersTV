@@ -36,9 +36,9 @@ class BootStrap {
         composition1.addToFrames(frame7)
         user2.addToCompositions(composition1)
         Composition composition2 = new Composition(name: "comp2")
-        Frame frame8 = new Frame(name: 'gg567', height: 450, streamSource: 'http://www.goodgame.ru/player.php?1717', width: 800, positionX: 170, positionY: 300, sourceType: Sources.GG, type: "stream")
-        Frame frame9 = new Frame(name: 'gg58', height: 450, streamSource: 'http://www.goodgame.ru/player.php?1717', width: 800, positionX: 270, positionY: 200, sourceType: Sources.GG, type: "stream")
-        Frame frame10 = new Frame(name: 'gg456', height: 450, streamSource: 'http://goodgame.ru/chat/Abver', width: 100, positionX: 770, positionY: 700, sourceType: Sources.GG, type: "chat")
+        Frame frame8 = new Frame(name: 'gg567', height: 450, streamSource: '1717', width: 800, positionX: 170, positionY: 300, sourceType: Sources.GG, type: "stream")
+        Frame frame9 = new Frame(name: 'gg58', height: 450, streamSource: '1717', width: 800, positionX: 270, positionY: 200, sourceType: Sources.GG, type: "stream")
+        Frame frame10 = new Frame(name: 'gg456', height: 450, streamSource: 'Abver', width: 100, positionX: 770, positionY: 700, sourceType: Sources.GG, type: "chat")
         //как узнавать id стримера?
         /*<iframe frameborder="0" width="800" height="450" src="http://www.goodgame.ru/player.php?1717"></iframe>*/
         composition2.addToFrames(frame8)
