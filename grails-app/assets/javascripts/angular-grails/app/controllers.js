@@ -4,9 +4,19 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
-playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, FullJson) {
+playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, FullJson) {
     $scope.editable = true;
     $scope.fullJson = FullJson.get({login: $routeParams.login});
+    $scope.saveJson = function() {
+        console.log('call saveJson');
+        $http
+            .post('user/' + $routeParams.login, $scope.fullJson)
+            .success (function(data, status, headers, config) {
+                console.log('success saveJson');
+            })
+            .error(function (data, status, headers, config) {
+            });
+    };
     $scope.trustSrc = function (src) {
         return $sce.trustAsResourceUrl(src);
     };

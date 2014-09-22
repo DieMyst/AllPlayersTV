@@ -12,6 +12,6 @@ class UrlMappings {
 
         "/frames"(resources: 'frame')
         "/user/$login"(controller: 'player',
-                action: 'showUser')
+                action: 'rest')
     }
 }

@@ -1,6 +1,7 @@
 {{currentComp}}
 <button class="btn" ng-click="edit()">Edit</button>
 <button class="btn" ng-click="open(fullJson.sources)">Add frame</button>
+<button class="btn" ng-click="saveJson()">Save</button>
 <label>Composition
     <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>
 </label>
