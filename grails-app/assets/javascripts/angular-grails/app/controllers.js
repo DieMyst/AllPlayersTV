@@ -9,6 +9,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
     $scope.fullJson = FullJson.get({login: $routeParams.login});
     $scope.saveJson = function() {
         console.log('call saveJson');
+        console.log($scope.fullJson);
         $http
             .post('user/' + $routeParams.login, $scope.fullJson)
             .success (function(data, status, headers, config) {

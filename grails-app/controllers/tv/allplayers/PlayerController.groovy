@@ -1,6 +1,7 @@
 package tv.allplayers
 
 import grails.converters.JSON
+import groovy.json.JsonSlurper
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 class PlayerController {
@@ -23,7 +24,11 @@ class PlayerController {
                 render combined as JSON
                 break
             case "POST":
-                JSONObject savingJson = JSON.parse(request) as JSONObject
+                def slurper = new JsonSlurper()
+                def result = slurper.parse(request.reader)
+                def user = User.findByLogin(result.user.login)
+                user.save()
+                println result.toString()
                 break
             default:
                 println "def"

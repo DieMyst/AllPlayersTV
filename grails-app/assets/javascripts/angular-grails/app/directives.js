@@ -42,9 +42,6 @@ playerDirectives.directive('resizableDraggable', function () {
 
     return {
         restrict: 'A',
-        scope: {
-            callback: '&onResize'
-        },
         link: function postLink(scope, elem) {
             elem.resizable(resizableConfig).draggable(draggableConfig);
             if (elem.is('.ui-draggable') || (/absolute/).test(elem.css('position'))) {

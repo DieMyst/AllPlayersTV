@@ -61,6 +61,6 @@
             </ANY>
         </ANY>
     </ANY>
-    <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
+    <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar" ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
          ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}"></div>
 </div>
