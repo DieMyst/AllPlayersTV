@@ -8,4 +8,8 @@ class Composition {
 
     static constraints = {
     }
+
+    static mapping = {
+        frames cascade: 'all-delete-orphan'
+    }
 }

@@ -55,13 +55,12 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             }
         });
         addFrameForm.result.then(function (newFrame) {
-            newFrame.height = 100;
-            newFrame.width = 200;
-            newFrame.positionX = 0;
-            newFrame.positionY = 0;
+            newFrame.height = '100px';
+            newFrame.width = '200px';
+            newFrame.positionX = '0px';
+            newFrame.positionY = '0px';
             newFrame.sourceType = newFrame.sourceType.value;
             $scope.currentComp.frames = $scope.currentComp.frames.concat(newFrame);
         });
     };
-    $log.info($scope);
 });

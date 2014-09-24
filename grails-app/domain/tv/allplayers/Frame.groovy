@@ -3,14 +3,13 @@ package tv.allplayers
 class Frame {
     static belongsTo = [composition: Composition]
 
-    String name
     String streamSource
     int sourceType
     String type;
-    int height
-    int width
-    int positionX
-    int positionY
+    String height
+    String width
+    String positionX
+    String positionY
 
     static constraints = {
     }

@@ -8,4 +8,8 @@ class User {
 
     static constraints = {
     }
+
+    static mapping = {
+        compositions cascade: 'all-delete-orphan'
+    }
 }

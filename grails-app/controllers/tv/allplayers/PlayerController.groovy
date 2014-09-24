@@ -26,9 +26,21 @@ class PlayerController {
             case "POST":
                 def slurper = new JsonSlurper()
                 def result = slurper.parse(request.reader)
-                def user = User.findByLogin(result.user.login)
-                user.save()
-                println result.toString()
+                def newCompositions = []
+                result.user.compositions.each{newCompositions.add(new Composition(it))}
+                def user = User.findByLogin(params.login)
+                user.compositions.clear()
+
+                newCompositions.each { comp ->
+                    comp.frames.each { frame ->
+                        comp.addToFrames(frame)
+                    }
+                    user.addToCompositions(comp)
+                }
+
+                user.save(flush: true)
+                response.status = 200
+                render response
                 break
             default:
                 println "def"
