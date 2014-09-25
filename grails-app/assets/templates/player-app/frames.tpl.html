@@ -1,7 +1,17 @@
-{{currentComp}}
-<button class="btn" ng-click="edit()">Edit</button>
-<button class="btn" ng-click="open(fullJson.sources)">Add frame</button>
-<button class="btn" ng-click="saveJson()">Save</button>
+<div id="box" class="hide">
+    <ul id="tab">
+        <li>
+            <img id="arrow" ng-click="toggle('box');" src="assets/images/arrowleft.png">
+        </li>
+    </ul>
+    <div id="buttons">
+        <div id="deco">
+            <button class="btn" ng-click="edit()">Edit</button>
+            <button class="btn" ng-click="open(fullJson.sources)">Add frame</button>
+            <button class="btn" ng-click="saveJson()">Save</button>
+        </div>
+    </div>
+</div>
 <label>Composition
     <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>
 </label>
@@ -68,6 +78,6 @@
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
          ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}">
-        <button class="close" ng-click="close(currentComp.frames, $index)">X</button>
+        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="close(currentComp.frames, $index)">X</button>
     </div>
 </div>

@@ -19,8 +19,6 @@ class PlayerController {
                 def sourcesJson = Sources.getSources();
                 combined.put("user", userJson)
                 combined.put("sources", sourcesJson)
-                println(combined)
-                println("GET request")
                 render combined as JSON
                 break
             case "POST":
