@@ -33,7 +33,9 @@ class PlayerController {
 
                 newCompositions.each { comp ->
                     comp.frames.each { frame ->
-                        comp.addToFrames(frame)
+                        if (frame != null) {
+                            comp.addToFrames(frame)
+                        }
                     }
                     user.addToCompositions(comp)
                 }

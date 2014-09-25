@@ -29,7 +29,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             }
             $scope.editable = false;
         } else {
-            for (var i = 0; i < bars.length; i++) {
+            for (i = 0; i < bars.length; i++) {
                 bars[i].style.display = "block";
             }
             $scope.editable = true;
@@ -38,6 +38,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
     $scope.open = function() {
         var scope = $rootScope.$new();
         scope.sources = $scope.fullJson.sources;
+        scope.types = ['stream', 'chat'];
         var addFrameForm = $modal.open({
             templateUrl: 'modal-add-frame.html',
             backdrop: true,
@@ -54,6 +55,10 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
                 };
             }
         });
+        scope.newFrame = {
+            type: scope.types[0],
+            sourceType: scope.sources[0]
+        };
         addFrameForm.result.then(function (newFrame) {
             newFrame.height = '100px';
             newFrame.width = '200px';

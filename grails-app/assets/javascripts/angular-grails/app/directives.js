@@ -9,6 +9,9 @@ playerDirectives.directive('resizableDraggable', function () {
     return {
         restrict: 'A',
         link: function (scope, elem) {
+            scope.close = function(frames, index) {
+                frames.splice(index, 1);
+            };
             elem.resizable(
                 {
                     resize: function (event, ui) {

@@ -7,9 +7,7 @@
             <select ng-options="source.source for source in sources track by source.value" ng-model="newFrame.sourceType"></select>
         </label>
         <label>Stream or chat
-            <select ng-model="newFrame.type">
-                <option value="stream">Stream</option>
-                <option value="chat">Chat</option>
+            <select ng-model="newFrame.type" ng-options="o as o for o in types">
             </select>
         </label>
     </div>
