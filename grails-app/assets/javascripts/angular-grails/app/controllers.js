@@ -5,8 +5,19 @@
 var playerControllers = angular.module('playerControllers', []);
 
 playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, FullJson) {
+    $scope.menuClass = 'hideMenu';
     $scope.editable = true;
     $scope.fullJson = FullJson.get({login: $routeParams.login});
+
+    $scope.addComp = function(name) {
+        var newComposition = {};
+        newComposition.name = name;
+        newComposition.frames = [];
+        console.log(newComposition);
+        $scope.fullJson.user.compositions.push(newComposition);
+
+    };
+
     $scope.saveJson = function() {
         console.log('call saveJson');
         console.log($scope.fullJson);
@@ -18,9 +29,28 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             .error(function (data, status, headers, config) {
             });
     };
+
+    $scope.toggle = function(id) {
+        function delay(elem, src, delayTime){
+            window.setTimeout(function() {elem.setAttribute("src", src);}, delayTime);
+        }
+        var el = document.getElementById(id);
+        var img = document.getElementById("arrow");
+        var box = $scope.menuClass;
+        if(box == "hideMenu"){
+            $scope.menuClass = 'showMenu';
+            delay(img, $scope.fullJson.menuarrow.arrowright, 400);
+        }
+        else{
+            $scope.menuClass = 'hideMenu';
+            delay(img, $scope.fullJson.menuarrow.arrowleft, 400);
+        }
+    };
+
     $scope.trustSrc = function (src) {
         return $sce.trustAsResourceUrl(src);
     };
+
     $scope.edit = function() {
         var bars = $(".bar");
         if ($scope.editable) {
@@ -35,6 +65,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             $scope.editable = true;
         }
     };
+
     $scope.open = function() {
         var scope = $rootScope.$new();
         scope.sources = $scope.fullJson.sources;
@@ -65,7 +96,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             newFrame.positionX = '0px';
             newFrame.positionY = '0px';
             newFrame.sourceType = newFrame.sourceType.value;
-            $scope.currentComp.frames = $scope.currentComp.frames.concat(newFrame);
+            $scope.currentComp.frames.push(newFrame);
         });
     };
 });

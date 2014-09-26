@@ -17,8 +17,13 @@ class PlayerController {
                 JSONObject combined = new JSONObject();
                 def userJson = User.findByLogin(params.login)
                 def sourcesJson = Sources.getSources();
+                def img = [arrowleft: "${asset.assetPath(src: 'arrowleft.png')}",
+                    arrowright: "${asset.assetPath(src: 'arrowright.png')}"
+                ]
+
                 combined.put("user", userJson)
                 combined.put("sources", sourcesJson)
+                combined.put("menuarrow", img)
                 render combined as JSON
                 break
             case "POST":

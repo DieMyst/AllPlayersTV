@@ -1,16 +1,21 @@
-<div id="box" class="hide">
-    <ul id="tab">
-        <li>
-            <img id="arrow" ng-click="toggle('box');" src="assets/images/arrowleft.png">
-        </li>
-    </ul>
+<pre>{{ fullJson | json }}</pre>
+<div id="box" class="{{menuClass}}">
     <div id="buttons">
         <div id="deco">
-            <button class="btn" ng-click="edit()">Edit</button>
-            <button class="btn" ng-click="open(fullJson.sources)">Add frame</button>
-            <button class="btn" ng-click="saveJson()">Save</button>
+            <button class="bt" ng-click="edit()">Edit</button>
+            <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
+            <button class="bt" ng-click="saveJson()">Save</button>
+            <label>
+                <button class="bt" ng-click="addComp(newComp)">Add composition</button>
+                <input ng-model="newComp">
+            </label>
         </div>
     </div>
+    <ul id="tab">
+        <li>
+            <img id="arrow" ng-click="toggle('box');" ng-src="{{fullJson.menuarrow.arrowleft}}"/>
+        </li>
+    </ul>
 </div>
 <label>Composition
     <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>

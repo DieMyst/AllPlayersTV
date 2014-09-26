@@ -27,3 +27,86 @@ iframe {
 .onbottom {
     z-index: 1;
 }
+
+#box{
+
+    font-size: 12px;
+    line-height: 20px;
+    top: -114px;
+    left: 25%; /* change this value to place the menu higher or lower */
+    position: fixed;
+    z-index: 1000;
+}
+
+#tab{
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 0 -3px;
+    padding: 0;
+    position: relative;
+    z-index: 99;
+}
+
+#tab li span{
+    display: block;
+    padding: 0 5px;
+    position: relative;
+}
+
+#links{
+    width: 80px;
+    padding: 10px;
+    float: left;
+    border-left: 1px solid #B4B8BB;
+}
+
+.showMenu, .hideMenu{
+    /* we specify the transition length for hiding and showing */
+    transition: margin-top .4s ease-in;
+    -webkit-transition: margin-top .4s ease-in;
+}
+
+.hideMenu{
+    margin-top:0px;
+}
+
+.showMenu{
+    margin-top:115px;
+}
+
+#arrow, .bt{
+    cursor: pointer;
+}
+
+.bt{
+    width: 97px;
+    height: 40px;
+    margin: -1px;
+    text-align:center;
+    border:1px solid #858fa6;
+    font: bold 13px Helvetica,Arial,sans-serif;
+    text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+.bt a{
+    line-height: 40px;
+    color: #fff;
+    display: block;
+}
+
+.bt:hover{
+    transition: background .3s linear;
+    background: #32A3D3;
+    -o-transition: background .3s linear;
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+}
+
+#deco{
+    background-color: white;
+    width: 325px;
+    float: left;
+    box-shadow:0px 0px 5px #000;
+    -moz-box-shadow:0px 0px 5px #000;
+    -webkit-box-shadow:0px 0px 5px #000;
+}
