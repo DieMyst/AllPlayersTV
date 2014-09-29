@@ -24,8 +24,12 @@ playerApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: 'frames.html',
-                controller: 'MainCtrl'
+                templateUrl: 'login.html',
+                controller: 'LoginCtrl'
+            }).
+            when('/login', {
+                templateUrl: 'login.html',
+                controller: 'LoginCtrl'
             }).
             when('/user/:login', {
                 templateUrl: 'frames.html',

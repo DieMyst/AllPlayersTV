@@ -9,4 +9,5 @@ playerServices.factory('FullJson', ['$resource',
         return $resource('user/:login', {}, {
             query: {method: 'GET', params: {login: 'diemust'}}
         });
-    }]);
+    }
+]);

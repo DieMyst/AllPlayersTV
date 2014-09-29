@@ -7,6 +7,8 @@ class User {
     String password
 
     static constraints = {
+        login(blank: false)
+        password(blank: false, password: true)
     }
 
     static mapping = {

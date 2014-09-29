@@ -4,6 +4,21 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
+playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
+
+    $scope.login = function() {
+        $http
+            .post('login', $scope.user)
+            .success (function(data, status, headers, config) {
+                console.log('success login');
+                $location.path("/user/" + $scope.user.login)
+            })
+            .error(function (data, status, headers, config) {
+                $scope.error = 'Error when authorized'
+            });
+    };
+});
+
 playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, FullJson) {
     $scope.menuClass = 'hideMenu';
     $scope.editable = true;
