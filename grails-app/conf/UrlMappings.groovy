@@ -14,6 +14,7 @@ class UrlMappings {
         "/user/$login"(controller: 'player',
                 action: 'rest')
         "/login"(controller: 'user', action: 'authenticate')
+        "/register"(controller: 'user', action: 'register')
         "/logout"(controller: 'user', action: 'logout')
     }
 }

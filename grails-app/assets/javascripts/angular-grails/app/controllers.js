@@ -17,6 +17,17 @@ playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http,
                 $scope.error = 'Error when authorized'
             });
     };
+    $scope.register = function() {
+        $http
+            .post('register', $scope.user)
+            .success (function(data, status, headers, config) {
+                console.log('success register');
+                $location.path("/user/" + $scope.user.login)
+            })
+            .error(function (data, status, headers, config) {
+                $scope.error = 'Error when registered'
+            });
+    };
 });
 
 playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, FullJson) {

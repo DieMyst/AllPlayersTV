@@ -27,6 +27,10 @@ playerApp.config(['$routeProvider',
                 templateUrl: 'login.html',
                 controller: 'LoginCtrl'
             }).
+            when('/register', {
+                templateUrl: 'register.html',
+                controller: 'LoginCtrl'
+            }).
             when('/login', {
                 templateUrl: 'login.html',
                 controller: 'LoginCtrl'
