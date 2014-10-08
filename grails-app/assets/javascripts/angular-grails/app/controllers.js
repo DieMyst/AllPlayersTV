@@ -4,7 +4,21 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
+playerControllers.controller('StartedCtrl', function ($scope, $routeParams, $http, $location) {
+    $http
+        .post('started')
+        .success (function(data, status, headers, config) {
+            console.log('success started');
+            /*$location.path("/user/" + $scope.user.login)*/
+        })
+        .error();
+});
+
 playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
+
+    $scope.goToReg = function() {
+        $location.path("register");
+    };
 
     $scope.login = function() {
         $http
