@@ -6,13 +6,15 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 
 class PlayerController {
 
+    def springSecurityService
+
     def index() {
         def json = User.list() as JSON
         render json
     }
 
     def rest() {
-        if (session.user) {
+        if (springSecurityService.isLoggedIn()) {
             switch (request.method) {
                 case "GET":
                     JSONObject combined = new JSONObject();

@@ -1,13 +1,15 @@
 import grails.converters.JSON
 import tv.allplayers.Composition
 import tv.allplayers.Frame
+import tv.allplayers.Role
 import tv.allplayers.Sources
 import tv.allplayers.User
+import tv.allplayers.UserRole
 
 class BootStrap {
 
     def init = { servletContext ->
-        User user = new User(login: "hey", password: "hey".encodeAsHash())
+        User user = new User(login: "hey", password: "hey", enabled: true)
         //Frame frame1 = new Frame(name: 'twitch1', height: 378, streamSource: 'http://www.twitch.tv/aui_2000', width: 620, positionX: 1, positionY: 20)
         /*<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=aui_2000" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=aui_2000&auto_play=true&start_volume=25" /></object>*/
         Composition composition = new Composition(name: "comp")
@@ -22,7 +24,7 @@ class BootStrap {
         user.addToCompositions(composition)
         user.save()
 
-        User user2 = new User(login: "diemust", password: "hey".encodeAsHash())
+        User user2 = new User(login: "diemust", password: "hey")
         //Frame frame1 = new Frame(name: 'twitch1', height: 378, streamSource: 'http://www.twitch.tv/aui_2000', width: 620, positionX: 1, positionY: 20)
         /*<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=aui_2000" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=aui_2000&auto_play=true&start_volume=25" /></object>*/
         Composition composition1 = new Composition(name: "comp1")

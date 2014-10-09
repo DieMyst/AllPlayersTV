@@ -4,17 +4,18 @@
 
 var playerControllers = angular.module('playerControllers', []);
 
-playerControllers.controller('StartedCtrl', function ($scope, $routeParams, $http, $location) {
+playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
+
     $http
-        .post('started')
+        .post('started', null)
         .success (function(data, status, headers, config) {
             console.log('success started');
             /*$location.path("/user/" + $scope.user.login)*/
         })
-        .error();
-});
-
-playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
+        .error(function (data, status, headers, config) {
+            console.log('error started');
+            console.log(status);
+        });
 
     $scope.goToReg = function() {
         $location.path("register");
