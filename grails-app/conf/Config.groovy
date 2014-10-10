@@ -115,9 +115,21 @@ log4j.main = {
             'org.springframework',
             'org.hibernate',
             'net.sf.ehcache.hibernate'
+    root {
+        debug 'stdout'
+    }
 }
 
 grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'salt'
+
+grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'tv.allplayers.AuthenticationToken'
+grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
+grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
+
+grails.plugin.springsecurity.filterChain.chainMap = [
+        '/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter-restTokenValidationFilter',
+        '/**': 'JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter'
+]
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'tv.allplayers.User'

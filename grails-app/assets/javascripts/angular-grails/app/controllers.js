@@ -23,13 +23,15 @@ playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http,
 
     $scope.login = function() {
         $http
-            .post('login', $scope.user)
+            .post('api/login', $scope.user)
             .success (function(data, status, headers, config) {
                 console.log('success login');
+                console.log(status);
                 $location.path("/user/" + $scope.user.login)
             })
             .error(function (data, status, headers, config) {
-                $scope.error = 'Error when authorized'
+                $scope.error = 'Error when authorized';
+                console.log(status);
             });
     };
     $scope.register = function() {
