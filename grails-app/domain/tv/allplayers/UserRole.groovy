@@ -25,22 +25,22 @@ class UserRole implements Serializable {
 		builder.toHashCode()
 	}
 
-	static UserRole get(long secUserId, long secRoleId) {
+	static UserRole get(long userId, long roleId) {
 		UserRole.where {
 			user == SecUser.load(secUserId) &&
 			role == Role.load(secRoleId)
 		}.get()
 	}
 
-	static boolean exists(long secUserId, long secRoleId) {
+	static boolean exists(long userId, long roleId) {
 		UserRole.where {
-			user == User.load(secUserId) &&
-			role == Role.load(secRoleId)
+			user == User.load(userId) &&
+			role == Role.load(roleId)
 		}.count() > 0
 	}
 
-	static UserRole create(User secUser, Role secRole, boolean flush = false) {
-		def instance = new UserRole(user: secUser, role: secRole)
+	static UserRole create(User user, Role role, boolean flush = false) {
+		def instance = new UserRole(user: user, role: role)
 		instance.save(flush: flush, insert: true)
 		instance
 	}

@@ -122,6 +122,8 @@ log4j.main = {
 grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'salt'
 grails.plugin.springsecurity.password.algorithm = 'SHA-256'
 
+grails.plugin.springsecurity.rememberMe.alwaysRemember = false
+
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'tv.allplayers.AuthenticationToken'
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
 grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
