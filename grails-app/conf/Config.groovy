@@ -115,19 +115,19 @@ log4j.main = {
             'org.springframework',
             'org.hibernate',
             'net.sf.ehcache.hibernate'
-    root {
-        debug 'stdout'
-    }
+    debug 'org.springframework.security', 'stdout'
+    debug 'com.odobo.grails.plugin.springsecurity', 'stdout'
 }
 
 grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'salt'
+grails.plugin.springsecurity.password.algorithm = 'SHA-256'
 
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'tv.allplayers.AuthenticationToken'
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
 grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
 
 grails.plugin.springsecurity.filterChain.chainMap = [
-        '/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter-restTokenValidationFilter',
+        '/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter',
         '/**': 'JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter'
 ]
 

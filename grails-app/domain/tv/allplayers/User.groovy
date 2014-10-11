@@ -7,7 +7,7 @@ class User {
 
     transient springSecurityService
 
-    String login
+    String username
     String password
     String salt
     boolean enabled = true
@@ -18,7 +18,7 @@ class User {
     static transients = ['springSecurityService']
 
     static constraints = {
-        login(blank: false, unique: true)
+        username(blank: false, unique: true)
         password(blank: false)
         salt(nullable: true, maxSize: 64)
     }
@@ -28,7 +28,7 @@ class User {
     }
 
     Set<Role> getAuthorities() {
-        UserRole.findAllByUser(this).collect { it.secRole }
+        UserRole.findAllByUser(this).collect { it.role }
     }
 
     def beforeInsert() {

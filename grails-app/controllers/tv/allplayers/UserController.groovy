@@ -15,7 +15,7 @@ class UserController {
         } else if (g.cookie(name: 'login')) { //если в кукисах есть параметры юзера
             def login = g.cookie(name: 'login').toString();
             def hashPass = g.cookie(name: 'hashPass').toString();
-            def user = User.findByLoginAndPassword(login, hashPass)
+            def user = User.findByUsernameAndPassword(login, hashPass)
             if (user) { //если подходят параметры
                 session.user = user
                 render status: 200
@@ -32,7 +32,7 @@ class UserController {
         def result = request.JSON
         if (result.size() != 0) {
             def hashPass = result.password.encodeAsHash();
-            User user = User.findByLoginAndPassword(result.login, hashPass)
+            User user = User.findByUsernameAndPassword(result.login, hashPass)
             if (user) {
                 session.user = user
                 saveCookie(user)
@@ -47,9 +47,9 @@ class UserController {
         def result = request.JSON
         if (result.size() != 0) {
             def hashPass = result.password.encodeAsHash();
-            def user = User.findByLogin(result.login)
+            def user = User.findByUsername(result.login)
             if (!user) {
-                user = new User(login: result.login, password: hashPass).save(flush: true)
+                user = new User(username: result.login, password: hashPass).save(flush: true)
                 session.user = user
                 saveCookie(user)
                 render status: 200
@@ -66,7 +66,7 @@ class UserController {
     }
 
     void saveCookie(User user) {
-        Cookie loginCookie = new Cookie("login", user.login)
+        Cookie loginCookie = new Cookie("login", user.username)
         loginCookie.maxAge = 2629743
         loginCookie.domain = "allPlayersTv"
         response.addCookie(loginCookie)
@@ -78,7 +78,7 @@ class UserController {
     }
 
     void delCookie(User user) {
-        Cookie loginCookie = new Cookie("login", user.login)
+        Cookie loginCookie = new Cookie("login", user.username)
         loginCookie.path = "/"
         loginCookie.maxAge = 0
         loginCookie.domain = "allPlayersTv"

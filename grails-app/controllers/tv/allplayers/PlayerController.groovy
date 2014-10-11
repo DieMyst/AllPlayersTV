@@ -1,7 +1,6 @@
 package tv.allplayers
 
 import grails.converters.JSON
-import groovy.json.JsonSlurper
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 class PlayerController {
@@ -18,7 +17,7 @@ class PlayerController {
             switch (request.method) {
                 case "GET":
                     JSONObject combined = new JSONObject();
-                    def userJson = User.findByLogin(params.login)
+                    def userJson = User.findByUsername(params.login)
                     def sourcesJson = Sources.getSources();
                     def img = [arrowleft : "${asset.assetPath(src: 'arrowleft.png')}",
                                arrowright: "${asset.assetPath(src: 'arrowright.png')}"
@@ -32,7 +31,7 @@ class PlayerController {
                     def result = request.JSON
                     def newCompositions = []
                     result.user.compositions.each { newCompositions.add(new Composition(it)) }
-                    def user = User.findByLogin(params.login)
+                    def user = User.findByUsername(params.login)
                     user.compositions.clear()
 
                     newCompositions.each { comp ->

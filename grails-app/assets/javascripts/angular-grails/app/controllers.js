@@ -27,7 +27,7 @@ playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http,
             .success (function(data, status, headers, config) {
                 console.log('success login');
                 console.log(status);
-                $location.path("/user/" + $scope.user.login)
+                $location.path("/user/" + $scope.user.username)
             })
             .error(function (data, status, headers, config) {
                 $scope.error = 'Error when authorized';
