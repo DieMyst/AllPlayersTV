@@ -1,56 +1,14 @@
 'use strict';
 
-/* Controllers */
-
-var playerControllers = angular.module('playerControllers', []);
-
-playerControllers.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
-
-    $http
-        .post('started', null)
-        .success (function(data, status, headers, config) {
-            console.log('success started');
-            /*$location.path("/user/" + $scope.user.login)*/
-        })
-        .error(function (data, status, headers, config) {
-            console.log('error started');
-            console.log(status);
-        });
-
-    $scope.goToReg = function() {
-        $location.path("register");
-    };
-
-    $scope.login = function() {
-        $http
-            .post('api/login', $scope.user)
-            .success (function(data, status, headers, config) {
-                console.log('success login');
-                console.log(status);
-                $location.path("/user/" + $scope.user.username)
-            })
-            .error(function (data, status, headers, config) {
-                $scope.error = 'Error when authorized';
-                console.log(status);
-            });
-    };
-    $scope.register = function() {
-        $http
-            .post('register', $scope.user)
-            .success (function(data, status, headers, config) {
-                console.log('success register');
-                $location.path("/user/" + $scope.user.login)
-            })
-            .error(function (data, status, headers, config) {
-                $scope.error = 'Error when registered'
-            });
-    };
-});
-
-playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, FullJson) {
+playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'ordersService', 'authService',
+    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, ordersService, authService) {
     $scope.menuClass = 'hideMenu';
     $scope.editable = true;
-    $scope.fullJson = FullJson.get({login: $routeParams.login});
+    $scope.fullJson = ordersService.get({login: $routeParams.login});
+
+    $scope.logOut = function() {
+        authService.logOut();
+    };
 
     $scope.addComp = function(name) {
         var newComposition = {};
@@ -65,7 +23,7 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
         console.log('call saveJson');
         console.log($scope.fullJson);
         $http
-            .post('user/' + $routeParams.login, $scope.fullJson)
+            .post('api/user/' + $routeParams.login, $scope.fullJson)
             .success (function(data, status, headers, config) {
                 console.log('success saveJson');
             })
@@ -142,4 +100,4 @@ playerControllers.controller('MainCtrl', function ($scope, $sce, $modal, $log, $
             $scope.currentComp.frames.push(newFrame);
         });
     };
-});
+}]);

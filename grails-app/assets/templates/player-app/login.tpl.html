@@ -1,12 +1,12 @@
 <form>
-    <span class="text-error">{{error}}</span>
+    <span class="text-error">{{message}}</span>
     <label>
         Username
-        <input ng-model="user.username">
+        <input ng-model="loginData.userName">
     </label>
     <label>
         Password
-        <input ng-model="user.password">
+        <input ng-model="loginData.password">
     </label>
     <button class="bt" ng-click="login()">Login</button>
     <button class="bt" ng-click="goToReg()">Register</button>

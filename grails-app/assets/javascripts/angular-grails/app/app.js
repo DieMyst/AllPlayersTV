@@ -1,10 +1,11 @@
 //= require angular/angular
 //= require_tree angular/modules
 //= require_self
-//= require controllers
-//= require services
+//= require_tree controllers
+//= require_tree services
 //= require directives
-//= require_self
+//= require config-app
+//= require run-app
 //= require_tree player-app
 
 'use strict';
@@ -14,32 +15,10 @@
 var playerApp = angular.module('playerApp', [
     'ngRoute',
     'ngSanitize',
-    'playerControllers',
-    'playerServices',
+    'ngResource',
     'playerDirectives',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'LocalStorageModule'
 ]);
 
-playerApp.config(['$routeProvider',
-    function ($routeProvider) {
-        $routeProvider.
-            when('/', {
-                templateUrl: 'login.html',
-                controller: 'LoginCtrl'
-            }).
-            when('/register', {
-                templateUrl: 'register.html',
-                controller: 'LoginCtrl'
-            }).
-            when('/login', {
-                templateUrl: 'login.html',
-                controller: 'LoginCtrl'
-            }).
-            when('/user/:login', {
-                templateUrl: 'frames.html',
-                controller: 'MainCtrl'
-            }).
-            otherwise({
-                redirectTo: ''
-            });
-    }]);
+

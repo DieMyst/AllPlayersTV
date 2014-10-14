@@ -127,9 +127,10 @@ grails.plugin.springsecurity.rememberMe.alwaysRemember = false
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'tv.allplayers.AuthenticationToken'
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
 grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
+grails.plugin.springsecurity.rest.token.validation.enableAnonymousAccess = true
 
 grails.plugin.springsecurity.filterChain.chainMap = [
-        '/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter',
+        '/api/**': 'anonymousAuthenticationFilter,restTokenValidationFilter,restExceptionTranslationFilter,filterInvocationInterceptor',
         '/**': 'JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter'
 ]
 
