@@ -117,6 +117,7 @@ log4j.main = {
             'net.sf.ehcache.hibernate'
     debug 'org.springframework.security', 'stdout'
     debug 'com.odobo.grails.plugin.springsecurity', 'stdout'
+    debug   'org.apache.catalina.filters.RequestDumperFilter'
 }
 
 grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'salt'
@@ -130,7 +131,7 @@ grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'use
 grails.plugin.springsecurity.rest.token.validation.enableAnonymousAccess = true
 
 grails.plugin.springsecurity.filterChain.chainMap = [
-        '/api/**': 'anonymousAuthenticationFilter,restTokenValidationFilter,restExceptionTranslationFilter,filterInvocationInterceptor',
+        '/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter',
         '/**': 'JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter'
 ]
 

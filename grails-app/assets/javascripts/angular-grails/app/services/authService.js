@@ -52,11 +52,24 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
 
     var _logOut = function () {
 
-        localStorageService.remove('authorizationData');
+        var deferred = $q.defer();
 
-        _authentication.isAuth = false;
-        _authentication.userName = "";
+        if (_authentication.isAuth) {
+            $http.post(serviceBase + 'api/logout', "").success(function (response) {
 
+                localStorageService.remove('authorizationData');
+
+                _authentication.isAuth = false;
+                _authentication.userName = "";
+
+                deferred.resolve(response);
+
+            }).error(function (err, status) {
+                deferred.reject(err);
+            });
+        }
+
+        return deferred.promise;
     };
 
     var _fillAuthData = function () {
