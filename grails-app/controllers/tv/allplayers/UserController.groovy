@@ -1,5 +1,6 @@
 package tv.allplayers
 
+import grails.plugin.springsecurity.annotation.Secured
 import org.codehaus.groovy.grails.commons.GrailsStringUtils
 
 class UserController {
@@ -11,15 +12,16 @@ class UserController {
     }
 
     def started = {
-        if (springSecurityService.isLoggedIn()) { //если есть сессия с юзером
+        if (springSecurityService.isLoggedIn()) { //РµСЃР»Рё РµСЃС‚СЊ СЃРµСЃСЃРёСЏ СЃ СЋР·РµСЂРѕРј
             render status: 200
             return
-        } else { //в остальных случаях страница аутентификации
+        } else { //РІ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… СЃС‚СЂР°РЅРёС†Р° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
             render status: 401
         }
     }
 
-    def register = {
+    @Secured(['PERMIT_ALL'])
+    def register() {
         def result = request.JSON
         if (result.size() != 0 && !GrailsStringUtils.isBlank(result.login) && !GrailsStringUtils.isBlank(result.password)) {
             def user = User.findByUsername(result.login)

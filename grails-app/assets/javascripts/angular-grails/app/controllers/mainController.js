@@ -39,8 +39,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 }, delayTime);
             }
 
-            var el = document.getElementById(id);
-            var img = document.getElementById("arrow");
+            var img = document.getElementById(id);
             var box = $scope.menuClass;
             if (box == "hideMenu") {
                 $scope.menuClass = 'showMenu';

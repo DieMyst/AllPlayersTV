@@ -18,7 +18,7 @@ class BootStrap {
         Frame frame2 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '70px', positionY: '600px', sourceType: Sources.GG, type: "stream")
         Frame frame3 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '170px', positionY: '600px', sourceType: Sources.GG, type: "stream")
         Frame frame4 = new Frame(height: '450px', streamSource: 'Abver', width: '100px', positionX: '770px', positionY: '300px', sourceType: Sources.GG, type: "chat")
-        //как узнавать id стримера?
+        //РєР°Рє СѓР·РЅР°РІР°С‚СЊ id СЃС‚СЂРёРјРµСЂР°?
         /*<iframe frameborder="0" width="800" height="450" src="http://www.goodgame.ru/player.php?1717"></iframe>*/
         composition.addToFrames(frame3)
         composition.addToFrames(frame2)
@@ -34,7 +34,7 @@ class BootStrap {
         Frame frame5 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '70px', positionY: '600px', sourceType: Sources.GG, type: "stream")
         Frame frame6 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '170px', positionY: '600px', sourceType: Sources.GG, type: "stream")
         Frame frame7 = new Frame(height: '450px', streamSource: '1717', width: '100px', positionX: '770px', positionY: '300px', sourceType: Sources.GG, type: "chat")
-        //как узнавать id стримера?
+        //РєР°Рє СѓР·РЅР°РІР°С‚СЊ id СЃС‚СЂРёРјРµСЂР°?
         /*<iframe frameborder="0" width="800" height="450" src="http://www.goodgame.ru/player.php?1717"></iframe>*/
         composition1.addToFrames(frame5)
         composition1.addToFrames(frame6)
@@ -44,7 +44,7 @@ class BootStrap {
         Frame frame8 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '170px', positionY: '300px', sourceType: Sources.GG, type: "stream")
         Frame frame9 = new Frame(height: '450px', streamSource: '1717', width: '800px', positionX: '270px', positionY: '200px', sourceType: Sources.GG, type: "stream")
         Frame frame10 = new Frame(height: '450px', streamSource: 'Abver', width: '100px', positionX: '770px', positionY: '700px', sourceType: Sources.GG, type: "chat")
-        //как узнавать id стримера?
+        //РєР°Рє СѓР·РЅР°РІР°С‚СЊ id СЃС‚СЂРёРјРµСЂР°?
         /*<iframe frameborder="0" width="800" height="450" src="http://www.goodgame.ru/player.php?1717"></iframe>*/
         composition2.addToFrames(frame8)
         composition2.addToFrames(frame9)
@@ -56,7 +56,6 @@ class BootStrap {
         JSON.registerObjectMarshaller(User) { User jUser ->
             return [
                     login: jUser.username,
-                    password: jUser.password,
                     compositions: jUser.compositions
             ]
         }

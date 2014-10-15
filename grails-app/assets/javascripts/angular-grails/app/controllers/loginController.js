@@ -14,7 +14,7 @@ playerApp.controller('LoginCtrl', ['$scope', '$routeParams', '$http', '$location
                     $location.path("/user/" + $scope.loginData.userName)
                 },
                 function (err) {
-                    $scope.message = err.error_description;
+                    $scope.message = "Ошибка авторизации. Неправильно указан логин или пароль.";
                 });
         };
 

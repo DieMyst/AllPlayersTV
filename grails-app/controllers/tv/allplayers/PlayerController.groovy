@@ -48,6 +48,10 @@ class PlayerController {
                     response.status = 200
                     render response
                     break
+                } else {
+                    response.status = 401
+                    render response
+                    break
                 }
             default:
                 println "def"
