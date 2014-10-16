@@ -1,16 +1,16 @@
 <form>
-    <span class="text-error">{{error}}</span>
+    <span class="text-error">{{message}}</span>
     <label>
         Username
-        <input ng-model="user.userName">
+        <input placeholder="Username" ng-model="registration.userName">
     </label>
     <label>
         Password
-        <input ng-model="user.password">
+        <input placeholder="Password" ng-model="registration.password">
     </label>
     <label>
         Repeat Password
-        <input ng-model="user.confirmPassword">
+        <input placeholder="Confirm password" ng-model="registration.confirmPassword">
     </label>
     <button class="bt" ng-click="signUp()">Register</button>
 </form>

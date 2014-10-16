@@ -12,9 +12,10 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     var _saveRegistration = function (registration) {
 
         _logOut();
+        var deferred = $q.defer();
 
-        return $http.post(serviceBase + 'api/register', registration).then(function (response) {
-            return response;
+        return $http.post(serviceBase + 'register', registration, { headers: { 'Content-Type': 'application/json' } }).then(function (response) {
+            deferred.resolve(response);
         });
 
     };
@@ -54,16 +55,13 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
 
         var deferred = $q.defer();
 
+        localStorageService.remove('authorizationData');
+        _authentication.isAuth = false;
+        _authentication.userName = "";
+
         if (_authentication.isAuth) {
             $http.post(serviceBase + 'api/logout', "").success(function (response) {
-
-                localStorageService.remove('authorizationData');
-
-                _authentication.isAuth = false;
-                _authentication.userName = "";
-
                 deferred.resolve(response);
-
             }).error(function (err, status) {
                 deferred.reject(err);
             });

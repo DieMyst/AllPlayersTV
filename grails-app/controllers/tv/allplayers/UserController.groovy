@@ -20,18 +20,25 @@ class UserController {
         }
     }
 
-    @Secured(['PERMIT_ALL'])
     def register() {
         def result = request.JSON
-        if (result.size() != 0 && !GrailsStringUtils.isBlank(result.login) && !GrailsStringUtils.isBlank(result.password)) {
-            def user = User.findByUsername(result.login)
-            if (!user) {
-                user = new User(username: result.login, password: result.password).save(flush: true)
-                UserRole.create user, Role.findByAuthority('ROLE_USER')
-                render status: 200
-                return
+        if (result.size() != 0 && !GrailsStringUtils.isBlank(result.userName) && !GrailsStringUtils.isBlank(result.password)
+                && !GrailsStringUtils.isBlank(result.confirmPassword)) {
+            if (!result.confirmPassword.equals(result.password)) {
+                render(status: 400, text: 'Password and confirm are not equals.')
+            } else {
+                def user = User.findByUsername(result.userName)
+                if (!user) {
+                    user = new User(username: result.userName, password: result.password).save(flush: true)
+                    UserRole.create user, Role.findByAuthority('ROLE_USER')
+
+                    render status: 200
+                } else {
+                    render(status: 400, text: 'User with same name registered earlier.')
+                }
             }
+        } else {
+            render(status: 400, text: 'Fill all fields.')
         }
-        render status: 401
     }
 }

@@ -20,13 +20,7 @@ playerApp.controller('SignupCtrl', ['$scope', '$location', '$timeout', 'authServ
 
             },
             function (response) {
-                var errors = [];
-                for (var key in response.data.modelState) {
-                    for (var i = 0; i < response.data.modelState[key].length; i++) {
-                        errors.push(response.data.modelState[key][i]);
-                    }
-                }
-                $scope.message = "Failed to register user due to:" + errors.join(' ');
+                $scope.message = "Failed to register user due to: " + response.data;
             });
     };
 

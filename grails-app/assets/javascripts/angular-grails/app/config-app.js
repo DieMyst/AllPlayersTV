@@ -5,9 +5,6 @@ playerApp.config(['$routeProvider', '$httpProvider',
                 templateUrl: 'register.html',
                 controller: 'SignupCtrl'
             }).
-            when('/logout', {
-                controller: 'LogoutCtrl'
-            }).
             when('/login', {
                 templateUrl: 'login.html',
                 controller: 'LoginCtrl'

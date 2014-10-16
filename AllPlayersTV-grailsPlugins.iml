@@ -123,6 +123,9 @@
         <JAVADOC />
         <SOURCES>
           <root url="jar://$USER_HOME$/.ideaLibSources/spring-security-core-3.2.3.RELEASE-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/tomcat-embed-core-7.0.53-sources.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/7.0.53/tomcat-embed-core-7.0.53-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-security-web-3.2.3.RELEASE-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
