@@ -1,16 +1,8 @@
-<form>
+<form class="form-signin">
+    <h2 class="form-signin-heading">Sign up</h2>
     <span class="text-error">{{message}}</span>
-    <label>
-        Username
-        <input placeholder="Username" ng-model="registration.userName">
-    </label>
-    <label>
-        Password
-        <input placeholder="Password" ng-model="registration.password">
-    </label>
-    <label>
-        Repeat Password
-        <input placeholder="Confirm password" ng-model="registration.confirmPassword">
-    </label>
-    <button class="bt" ng-click="signUp()">Register</button>
+    <input class="form-control" placeholder="Username" ng-model="registration.userName">
+    <input class="form-control" placeholder="Password" ng-model="registration.password">
+    <input class="form-control" placeholder="Confirm password" ng-model="registration.confirmPassword">
+    <button class="btn-first btn btn-large btn-primary btn-block" ng-click="signUp()">Register</button>
 </form>

@@ -30,7 +30,7 @@ class UserController {
                 def user = User.findByUsername(result.userName)
                 if (!user) {
                     user = new User(username: result.userName, password: result.password).save(flush: true)
-                    UserRole.create user, Role.findByAuthority('ROLE_USER')
+                    UserRole.create user, Role.findByAuthority('ROLE_USER'), true
 
                     render status: 200
                 } else {

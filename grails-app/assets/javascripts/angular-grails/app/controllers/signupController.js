@@ -16,7 +16,7 @@ playerApp.controller('SignupCtrl', ['$scope', '$location', '$timeout', 'authServ
 
                 $scope.savedSuccessfully = true;
                 $scope.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";
-                startTimer();
+                startTimer($scope.registration);
 
             },
             function (response) {
@@ -24,10 +24,15 @@ playerApp.controller('SignupCtrl', ['$scope', '$location', '$timeout', 'authServ
             });
     };
 
-    var startTimer = function () {
+    var startTimer = function (data) {
         var timer = $timeout(function () {
             $timeout.cancel(timer);
-            $location.path('/login');
+            authService.login($scope.registration).then(function (response) {
+                    $location.path("/user/" + data.userName)
+                },
+                function (err) {
+                    $scope.message = "Ошибка авторизации. Неправильно указан логин или пароль.";
+                });
         }, 2000);
     }
 

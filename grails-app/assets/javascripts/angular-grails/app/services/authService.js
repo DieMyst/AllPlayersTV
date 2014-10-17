@@ -20,6 +20,22 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
 
     };
 
+    var _getFullJson = function (login) {
+        var deferred = $q.defer();
+        var data = {
+            login: login
+        };
+
+        $http.post(serviceBase + 'api/user/' + login, data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+            console.log(response);
+            deferred.resolve(response);
+        }).error(function (err, status) {
+            deferred.reject(err);
+        });
+
+        return deferred.promise;
+    };
+
     var _login = function (loginData) {
 
         if (_authentication.isAuth) {
@@ -85,6 +101,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     authServiceFactory.login = _login;
     authServiceFactory.logOut = _logOut;
     authServiceFactory.fillAuthData = _fillAuthData;
+    authServiceFactory.getFullJson = _getFullJson;
     authServiceFactory.authentication = _authentication;
 
     return authServiceFactory;

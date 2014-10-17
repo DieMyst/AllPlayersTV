@@ -2,7 +2,7 @@
 <div id="box" class="{{menuClass}}">
     <div id="buttons">
         <div id="deco">
-            <button class="bt" ng-click="edit()">Edit</button>
+            <button ng-if="canEdit" class="bt" ng-click="edit()">Edit</button>
             <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
             <button class="bt" ng-click="saveJson()">Save</button>
             <label>

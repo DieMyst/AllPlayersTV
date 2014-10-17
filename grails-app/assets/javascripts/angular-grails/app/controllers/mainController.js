@@ -1,10 +1,13 @@
 'use strict';
 
-playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'ordersService', 'authService',
-    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, ordersService, authService) {
+playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService',
+    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService) {
         $scope.menuClass = 'hideMenu';
         $scope.editable = true;
-        $scope.fullJson = ordersService.get({login: $routeParams.login});
+        $scope.fullJson = "";
+        authService.getFullJson($routeParams.login).then(function(response) {
+            $scope.fullJson = response;
+        });
 
         $scope.logOut = function () {
             authService.logOut();
@@ -24,7 +27,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             console.log('call saveJson');
             console.log($scope.fullJson);
             $http
-                .post('api/user/' + $routeParams.login, $scope.fullJson)
+                .save('api/user/' + $routeParams.login, $scope.fullJson)
                 .success(function (data, status, headers, config) {
                 console.log('success saveJson');
             })
