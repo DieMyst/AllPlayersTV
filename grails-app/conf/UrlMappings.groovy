@@ -12,7 +12,9 @@ class UrlMappings {
 
         "/frames"(resources: 'frame')
         "/api/user/$login"(controller: 'player',
-                action: 'rest')
+                action: 'get')
+        "/api/user/$login/edit"(controller: 'player',
+                action: 'edit')
         "/register"(controller: 'user', action: 'register')
         "/logout"(controller: 'user', action: 'logout')
     }

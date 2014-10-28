@@ -27,7 +27,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             console.log('call saveJson');
             console.log($scope.fullJson);
             $http
-                .save('api/user/' + $routeParams.login, $scope.fullJson)
+                .post('api/user/' + $routeParams.login + "/edit", $scope.fullJson)
                 .success(function (data, status, headers, config) {
                 console.log('success saveJson');
             })
