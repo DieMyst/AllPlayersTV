@@ -29,11 +29,10 @@ iframe {
 }
 
 #box{
-
     font-size: 12px;
     line-height: 20px;
-    top: -114px;
-    left: 25%; /* change this value to place the menu higher or lower */
+    bottom: -1px;
+    right: 10%; /* change this value to place the menu higher or lower */
     position: fixed;
     z-index: 1000;
 }
@@ -62,16 +61,16 @@ iframe {
 
 .showMenu, .hideMenu{
     /* we specify the transition length for hiding and showing */
-    transition: margin-top .4s ease-in;
-    -webkit-transition: margin-top .4s ease-in;
+    transition: margin-bottom .4s ease-in;
+    -webkit-transition: margin-bottom .4s ease-in;
 }
 
 .hideMenu{
-    margin-top:0px;
+    margin-bottom:0px;
 }
 
 .showMenu{
-    margin-top:115px;
+    margin-bottom:115px;
 }
 
 #arrow, .bt{

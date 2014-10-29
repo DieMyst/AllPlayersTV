@@ -14,13 +14,24 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             $location.path("/login");
         };
 
-        $scope.addComp = function (name) {
-            var newComposition = {};
-            newComposition.name = name;
-            newComposition.frames = [];
-            console.log(newComposition);
-            $scope.fullJson.user.compositions.push(newComposition);
+        $scope.logIn = function () {
+            $location.path("/login");
+        };
 
+        $scope.addComp = function (name) {
+            if (name != '' && name != null) {
+                var newComposition = {};
+                newComposition.name = name;
+                newComposition.frames = [];
+                console.log(newComposition);
+                $scope.fullJson.user.compositions.push(newComposition);
+            }
+        };
+
+        $scope.deleteComp = function () {
+            var index = $scope.fullJson.user.compositions.indexOf($scope.currentComp);
+            $scope.fullJson.user.compositions.splice(index, 1);
+            $scope.currentComp = null;
         };
 
         $scope.saveJson = function () {
@@ -46,11 +57,11 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             var box = $scope.menuClass;
             if (box == "hideMenu") {
                 $scope.menuClass = 'showMenu';
-                delay(img, $scope.fullJson.menuarrow.arrowright, 400);
+                delay(img, $scope.fullJson.menuarrow.arrowleft, 400);
             }
             else {
                 $scope.menuClass = 'hideMenu';
-                delay(img, $scope.fullJson.menuarrow.arrowleft, 400);
+                delay(img, $scope.fullJson.menuarrow.arrowright, 400);
             }
         };
 

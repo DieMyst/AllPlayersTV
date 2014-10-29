@@ -1,26 +1,32 @@
-<pre>{{ fullJson | json }}</pre>
 <div id="box" class="{{menuClass}}">
-    <div id="buttons">
-        <div id="deco">
-            <button ng-if="canEdit" class="bt" ng-click="edit()">Edit</button>
-            <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
-            <button class="bt" ng-click="saveJson()">Save</button>
-            <label>
-                <button class="bt" ng-click="addComp(newComp)">Add composition</button>
-                <input placeholder="Name of Composition" ng-model="newComp">
-            </label>
-            <button class="bt" ng-click="logOut()">Logout</button>
-        </div>
-    </div>
     <ul id="tab">
         <li>
-            <img id="arrow" ng-click="toggle('arrow');" ng-src="{{fullJson.menuarrow.arrowleft}}"/>
+            <img id="arrow" ng-click="toggle('arrow');" ng-src="{{fullJson.menuarrow.arrowright}}"/>
         </li>
     </ul>
+    <div id="buttons">
+        <div id="deco">
+            <ANY ng-if="fullJson.canEdit == true">
+                <button class="bt" ng-click="edit()">Edit</button>
+                <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
+                <label>
+                    <button class="bt" ng-click="addComp(newComp)">Add composition</button>
+                    <input placeholder="Name of Composition" ng-model="newComp">
+                </label>
+                <button class="bt" ng-click="deleteComp()">Delete comp</button>
+            </ANY>
+            <ANY ng-if="fullJson.isLogged == true">
+                <button class="bt" ng-click="saveJson()">Save</button>
+                <button class="bt" ng-click="logOut()">Logout</button>
+            </ANY>
+            <button ng-if="fullJson.isLogged == false" class="bt" ng-click="logIn()">Login</button>
+            <label>Composition
+                <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>
+            </label>
+        </div>
+    </div>
 </div>
-<label>Composition
-    <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>
-</label>
+
 
 <div ng-repeat="frame in currentComp.frames" class="outer">
     <ANY ng-switch on="frame.sourceType">
@@ -54,7 +60,7 @@
                     <param name="movie"
                            value="http://www.twitch.tv/widgets/live_embed_player.swf"/>
                     <param name="flashvars"
-                           value="hostname=www.twitch.tv&channel={{frame.streamSource}}"/>
+                           value="hostname=www.twitch.tv&channel={{frame.streamSource}}&auto_play=false&start_volume=25"/>
                 </object>
             </ANY>
             <ANY ng-if="frame.type == 'chat'">
@@ -84,6 +90,7 @@
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
          ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}">
-        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="close(currentComp.frames, $index)">X</button>
+        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="close(currentComp.frames, $index)">X
+        </button>
     </div>
 </div>

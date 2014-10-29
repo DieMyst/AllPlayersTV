@@ -59,7 +59,7 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.9.4"
         compile ":spring-security-core:2.0-RC4"
         compile ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
-        compile ":spring-security-rest:1.4.0", {
+        compile ":spring-security-rest:1.4.1.RC1", {
             excludes: 'spring-security-core'
         }
 

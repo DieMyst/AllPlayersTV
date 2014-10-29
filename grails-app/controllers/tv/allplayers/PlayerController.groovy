@@ -15,6 +15,7 @@ class PlayerController {
 
     @Secured(['ROLE_USER'])
     def edit() {
+        response.setContentType("application/json")
         if (springSecurityService.isLoggedIn() && springSecurityService.principal.username.equals(params.login)) {
             def result = request.JSON
             def newCompositions = []
@@ -35,22 +36,30 @@ class PlayerController {
             response.status = 200
             render response
         } else {
-
+           render "{ error: 'No rights to edit compositions' }";
         }
     }
 
     @Secured(['permitAll'])
     def get() {
+        response.setContentType("application/json")
         JSONObject combined = new JSONObject();
         def userJson = User.findByUsername(params.login)
-        def sourcesJson = Sources.getSources();
-        def img = [arrowleft : "${asset.assetPath(src: 'arrowleft.png')}",
-                   arrowright: "${asset.assetPath(src: 'arrowright.png')}"
-        ]
-        combined.put("user", userJson)
-        combined.put("sources", sourcesJson)
-        combined.put("menuarrow", img)
-        combined.put("canEdit", springSecurityService.isLoggedIn())
-        render combined as JSON
+        if (userJson) {
+            boolean isLoggedIn = springSecurityService.isLoggedIn();
+            boolean isThisUser = springSecurityService.principal.username.equals(params.login);
+            def sourcesJson = Sources.getSources();
+            def img = [arrowleft : "${asset.assetPath(src: 'arrowleft.png')}",
+                       arrowright: "${asset.assetPath(src: 'arrowright.png')}"
+            ]
+            combined.put("user", userJson)
+            combined.put("sources", sourcesJson)
+            combined.put("menuarrow", img)
+            combined.put("canEdit", isLoggedIn && isThisUser)
+            combined.put("isLogged", isLoggedIn)
+            render combined as JSON
+        } else {
+            combined.put("error", "No such user.")
+        }
     }
 }
