@@ -15,6 +15,8 @@ class UrlMappings {
                 action: 'get')
         "/api/user/$login/edit"(controller: 'player',
                 action: 'edit')
+        "/api/user/copy"(controller: 'player',
+                action: 'copyComp')
         "/register"(controller: 'user', action: 'register')
         "/logout"(controller: 'user', action: 'logout')
     }

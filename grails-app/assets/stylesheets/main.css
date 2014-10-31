@@ -1,14 +1,16 @@
 iframe {
     display: block;
-    position:absolute;
+    position: absolute;
     padding: 0;
     border: none;
     top: 0;
     left: 0;
 }
+
 .outer {
-    display:block;
+    display: block;
 }
+
 .bar {
     position: absolute;
     top: 0;
@@ -18,26 +20,29 @@ iframe {
     background-color: #ffffff;
     opacity: 0.5;
 }
+
 .ui-resizable {
     position: absolute;
 }
-.ontop{
+
+.ontop {
     z-index: 2;
 }
+
 .onbottom {
     z-index: 1;
 }
 
-#box{
+#box {
+    width: 100%;
     font-size: 12px;
     line-height: 20px;
     bottom: -1px;
-    right: 10%; /* change this value to place the menu higher or lower */
     position: fixed;
     z-index: 1000;
 }
 
-#tab{
+#tab {
     float: left;
     list-style: none outside none;
     margin: 0 0 0 -3px;
@@ -46,54 +51,54 @@ iframe {
     z-index: 99;
 }
 
-#tab li span{
+#tab li span {
     display: block;
     padding: 0 5px;
     position: relative;
 }
 
-#links{
+#links {
     width: 80px;
     padding: 10px;
     float: left;
     border-left: 1px solid #B4B8BB;
 }
 
-.showMenu, .hideMenu{
+.showMenu, .hideMenu {
     /* we specify the transition length for hiding and showing */
     transition: margin-bottom .4s ease-in;
     -webkit-transition: margin-bottom .4s ease-in;
 }
 
-.hideMenu{
-    margin-bottom:0px;
+/*.hideMenu {
+    margin-bottom: 0;
 }
 
-.showMenu{
-    margin-bottom:115px;
-}
+.showMenu {
+    margin-bottom: 57px;
+}*/
 
-#arrow, .bt{
+#arrow, .bt {
     cursor: pointer;
 }
 
-.bt{
+.bt {
     width: 97px;
     height: 40px;
-    margin: -1px;
-    text-align:center;
-    border:1px solid #858fa6;
-    font: bold 13px Helvetica,Arial,sans-serif;
-    text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+    margin: 4px 0;
+    text-align: center;
+    border: 1px solid #858fa6;
+    font: bold 13px Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
 }
 
-.bt a{
+.bt a {
     line-height: 40px;
     color: #fff;
     display: block;
 }
 
-.bt:hover{
+.bt:hover {
     transition: background .3s linear;
     background: #32A3D3;
     -o-transition: background .3s linear;
@@ -101,29 +106,47 @@ iframe {
     -webkit-transition: background .3s linear;
 }
 
-#deco{
+#deco {
     background-color: white;
-    width: 325px;
-    float: left;
-    box-shadow:0px 0px 5px #000;
-    -moz-box-shadow:0px 0px 5px #000;
-    -webkit-box-shadow:0px 0px 5px #000;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 0px 5px #000;
+    -moz-box-shadow: 0px 0px 5px #000;
+    -webkit-box-shadow: 0px 0px 5px #000;
+    padding: 6px 0;
 }
+
+#deco label {
+    display: inline-block;
+}
+
+#deco select {
+    margin-bottom: 0;
+}
+
+#menu-elements {
+    margin-top: 7px;
+}
+
 .btn-first {
     margin-top: 5px;
 }
+
 .form-signin {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
 }
+
 .form-signin .checkbox {
     font-weight: normal;
 }
+
 .form-signin .form-control {
     position: relative;
     height: auto;
@@ -133,17 +156,21 @@ iframe {
     padding: 10px;
     font-size: 16px;
 }
+
 .form-signin .form-control {
     width: 100%;
 }
+
 .form-signin .form-control:focus {
     z-index: 2;
 }
+
 .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;

@@ -36,7 +36,7 @@ class PlayerController {
             response.status = 200
             render response
         } else {
-           render "{ error: 'No rights to edit compositions' }";
+            render "{ error: 'No rights to edit compositions' }";
         }
     }
 
@@ -49,8 +49,8 @@ class PlayerController {
             boolean isLoggedIn = springSecurityService.isLoggedIn();
             boolean isThisUser = springSecurityService.principal.username.equals(params.login);
             def sourcesJson = Sources.getSources();
-            def img = [arrowleft : "${asset.assetPath(src: 'arrowleft.png')}",
-                       arrowright: "${asset.assetPath(src: 'arrowright.png')}"
+            def img = [arrowup  : "${asset.assetPath(src: 'arrowup.png')}",
+                       arrowdown: "${asset.assetPath(src: 'arrowdown.png')}"
             ]
             combined.put("user", userJson)
             combined.put("sources", sourcesJson)
@@ -62,4 +62,23 @@ class PlayerController {
             combined.put("error", "No such user.")
         }
     }
+
+    @Secured(['ROLE_USER'])
+    def copyComp() {
+        if (springSecurityService.isLoggedIn()) {
+            def result = request.JSON
+            Composition comp = new Composition(result)
+            comp.frames.each { frame ->
+                if (frame != null) {
+                    comp.addToFrames(frame)
+                }
+            }
+            User user = User.findByUsername(springSecurityService.principal.username)
+            user.addToCompositions(comp)
+            user.save(flush: true)
+            response.status = 200
+            render response
+        }
+    }
+
 }

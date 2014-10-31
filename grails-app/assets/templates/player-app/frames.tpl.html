@@ -1,28 +1,31 @@
+<!--<pre>{{fullJson | json}}</pre>-->
 <div id="box" class="{{menuClass}}">
     <ul id="tab">
         <li>
-            <img id="arrow" ng-click="toggle('arrow');" ng-src="{{fullJson.menuarrow.arrowright}}"/>
+            <img id="arrow" ng-click="toggle('arrow');" ng-src="{{fullJson.menuarrow.arrowdown}}"/>
         </li>
     </ul>
     <div id="buttons">
         <div id="deco">
             <ANY ng-if="fullJson.canEdit == true">
-                <button class="bt" ng-click="edit()">Edit</button>
-                <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
-                <label>
-                    <button class="bt" ng-click="addComp(newComp)">Add composition</button>
-                    <input placeholder="Name of Composition" ng-model="newComp">
-                </label>
-                <button class="bt" ng-click="deleteComp()">Delete comp</button>
-            </ANY>
-            <ANY ng-if="fullJson.isLogged == true">
+                <ANY ng-if="currentComp != null">
+                    <button class="bt" ng-click="edit()">Edit</button>
+                    <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
+                    <button class="bt" ng-click="deleteComp()">Delete comp</button>
+                    <button class="bt" ng-click="renameComp()">Rename comp</button>
+                </ANY>
                 <button class="bt" ng-click="saveJson()">Save</button>
+                <button class="bt" ng-click="addComp()">Add composition</button>
+            </ANY>
+            <label>Composition
+                <select ng-options="comp.name for comp in fullJson.user.compositions"
+                        ng-model="currentComp"></select>
+            </label>
+            <ANY ng-if="fullJson.isLogged == true">
+                <button ng-if="fullJson.canEdit == false && currentComp != null" class="bt" ng-click="copyComp()">Copy</button>
                 <button class="bt" ng-click="logOut()">Logout</button>
             </ANY>
             <button ng-if="fullJson.isLogged == false" class="bt" ng-click="logIn()">Login</button>
-            <label>Composition
-                <select ng-options="comp.name for comp in fullJson.user.compositions" ng-model="currentComp"></select>
-            </label>
         </div>
     </div>
 </div>
@@ -30,20 +33,6 @@
 
 <div ng-repeat="frame in currentComp.frames" class="outer">
     <ANY ng-switch on="frame.sourceType">
-        <ANY ng-switch-when="1">
-            <ANY ng-if="frame.type == 'stream'">
-                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
-                        ng-src="{{trustSrc('http://www.goodgame.ru/player.php?'+frame.streamSource)}}"
-                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
-                </iframe>
-            </ANY>
-            <ANY ng-if="frame.type == 'chat'">
-                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
-                        ng-src="{{trustSrc('http://www.goodgame.ru/chat/'+frame.streamSource)}}"
-                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
-                </iframe>
-            </ANY>
-        </ANY>
         <ANY ng-switch-when="0">
             <ANY ng-if="frame.type == 'stream'">
                 <object type="application/x-shockwave-flash"
@@ -72,6 +61,20 @@
                 </iframe>
             </ANY>
         </ANY>
+        <ANY ng-switch-when="1">
+            <ANY ng-if="frame.type == 'stream'">
+                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
+                        ng-src="{{trustSrc('http://www.goodgame.ru/player.php?'+frame.streamSource)}}"
+                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+                </iframe>
+            </ANY>
+            <ANY ng-if="frame.type == 'chat'">
+                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
+                        ng-src="{{trustSrc('http://www.goodgame.ru/chat/'+frame.streamSource)}}"
+                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+                </iframe>
+            </ANY>
+        </ANY>
         <ANY ng-switch-when="2">
             <ANY ng-if="frame.type == 'stream'">
                 <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
@@ -83,6 +86,14 @@
                 <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
                         ng-src="{{trustSrc('http://cybergame.tv/cgchat.htm?v=b#'+frame.streamSource)}}"
                         ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+                </iframe>
+            </ANY>
+        </ANY>
+        <ANY ng-switch-when="3">
+            <ANY ng-if="frame.type == 'chat'">
+                <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
+                        ng-src="{{trustSrc('http://chat.sc2tv.ru/index.htm?channelId='+frame.streamSource+'&fullScreen=1&width='+frame.width+'&height='+frame.height)}}"
+                        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height, 'background-color':'black'}">
                 </iframe>
             </ANY>
         </ANY>

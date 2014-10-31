@@ -2,7 +2,7 @@
 
 playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService',
     function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService) {
-        $scope.menuClass = 'hideMenu';
+        $scope.menuClass = 'showMenu';
         $scope.editable = true;
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function(response) {
@@ -16,16 +16,6 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
 
         $scope.logIn = function () {
             $location.path("/login");
-        };
-
-        $scope.addComp = function (name) {
-            if (name != '' && name != null) {
-                var newComposition = {};
-                newComposition.name = name;
-                newComposition.frames = [];
-                console.log(newComposition);
-                $scope.fullJson.user.compositions.push(newComposition);
-            }
         };
 
         $scope.deleteComp = function () {
@@ -57,12 +47,17 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             var box = $scope.menuClass;
             if (box == "hideMenu") {
                 $scope.menuClass = 'showMenu';
-                delay(img, $scope.fullJson.menuarrow.arrowleft, 400);
+                $('#deco').show( "drop",
+                    {direction: "down"}, 400 );
+                delay(img, $scope.fullJson.menuarrow.arrowdown, 400);
             }
             else {
                 $scope.menuClass = 'hideMenu';
-                delay(img, $scope.fullJson.menuarrow.arrowright, 400);
+                $('#deco').hide( "drop",
+                    {direction: "down"}, 400 );
+                delay(img, $scope.fullJson.menuarrow.arrowup, 400);
             }
+
         };
 
         $scope.trustSrc = function (src) {
@@ -84,11 +79,34 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             }
         };
 
+        $scope.addComp = function() {
+            var addCompForm = $modal.open({
+                templateUrl: 'modal-add-composition.html',
+                backdrop: true,
+                windowClass: 'modal',
+                controller: function ($scope, $modalInstance) {
+                    $scope.submit = function (newComp) {
+                        if (newComp != null) {
+                            $modalInstance.close(newComp);
+                        }
+                    };
+                    $scope.cancel = function () {
+                        $modalInstance.dismiss('cancel');
+                    };
+                }
+            });
+            addCompForm.result.then(function (newComp) {
+                newComp.frames = [];
+                $scope.fullJson.user.compositions.push(newComp);
+                $scope.currentComp = newComp;
+            });
+        };
+
         $scope.open = function () {
             var scope = $rootScope.$new();
             scope.sources = $scope.fullJson.sources;
             scope.types = ['stream', 'chat'];
-            var addFrameForm = $modal.open({
+            $scope.addFrameForm = $modal.open({
                 templateUrl: 'modal-add-frame.html',
                 backdrop: true,
                 windowClass: 'modal',
@@ -108,7 +126,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 type: scope.types[0],
                 sourceType: scope.sources[0]
             };
-            addFrameForm.result.then(function (newFrame) {
+            $scope.addFrameForm.result.then(function (newFrame) {
                 newFrame.height = '100px';
                 newFrame.width = '200px';
                 newFrame.positionX = '0px';
@@ -117,4 +135,58 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 $scope.currentComp.frames.push(newFrame);
             });
         };
+
+        $scope.copyComp = function() {
+            $http
+                .post("api/user/copy", $scope.currentComp)
+                .success(function (data, status, headers, config) {
+                    console.log('success copyJson');
+                })
+                .error(function (data, status, headers, config) {
+                });
+        };
+
+        $scope.renameComp = function () {
+            var rename = $modal.open({
+                templateUrl: 'modal-add-composition.html',
+                backdrop: true,
+                windowClass: 'modal',
+                controller: function ($scope, $modalInstance) {
+                    $scope.submit = function (input) {
+                        if (input != null) {
+                            $modalInstance.close(input);
+                        }
+                    };
+                    $scope.cancel = function () {
+                        $modalInstance.dismiss('cancel');
+                    };
+                }
+            });
+            rename.result.then(function (input) {
+                $scope.currentComp.name = input.name;
+            });
+        };
+
+        $(document).bind('keydown', 'space', function(){
+            $scope.toggle('arrow');
+        });
+
+        $(document).bind('keydown', 'e', function(){
+            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+                $scope.edit();
+            }
+        });
+
+        $(document).bind('keydown', 's', function(){
+            if ($scope.fullJson.canEdit === true) {
+                $scope.saveJson();
+            }
+        });
+
+        $(document).bind('keydown', 'a', function(){
+            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+                $scope.open();
+            }
+        });
+
     }]);

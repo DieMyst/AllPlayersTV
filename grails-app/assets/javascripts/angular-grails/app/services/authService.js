@@ -31,6 +31,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
             deferred.resolve(response);
         }).error(function (err, status) {
             deferred.reject(err);
+            _logOut();
         });
 
         return deferred.promise;
