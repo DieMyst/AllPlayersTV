@@ -5,7 +5,7 @@ class Frame {
 
     String streamSource
     int sourceType
-    String type;
+    String type
     String height
     String width
     String positionX

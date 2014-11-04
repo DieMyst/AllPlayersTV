@@ -1,3 +1,4 @@
+'use strict';
 playerApp.config(['$routeProvider', '$httpProvider',
     function ($routeProvider, $httpProvider) {
         $routeProvider.

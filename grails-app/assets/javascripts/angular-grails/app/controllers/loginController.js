@@ -1,3 +1,5 @@
+'use strict';
+
 playerApp.controller('LoginCtrl', ['$scope', '$routeParams', '$http', '$location', 'authService',
     function ($scope, $routeParams, $http, $location, authService) {
 

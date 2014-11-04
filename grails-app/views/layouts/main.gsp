@@ -10,8 +10,7 @@
     <asset:stylesheet src="main"/>
     <asset:stylesheet src="jquery-ui.min.css"/>
     <asset:stylesheet src="bootstrap-combined.min.css"/>
-    <asset:javascript src="application"/>
-    <asset:javascript src="ui-app"/>
+    <asset:javascript src="application.js"/>
 </head>
 
 <body>

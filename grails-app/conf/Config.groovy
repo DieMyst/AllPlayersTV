@@ -126,6 +126,12 @@ log4j.main = {
 grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'salt'
 grails.plugin.springsecurity.password.algorithm = 'SHA-256'
 
+grails.assets.minifyOptions = [
+        strictSemicolons: false,
+        mangleOptions: [mangle: true, toplevel: false, defines: null, except: null, no_functions:false],
+        genOptions: [indent_start:0, indent_level:4, quote_keys: false, space_colon: false, beautify: true, ascii_only: false, inline_script:false]
+]
+
 grails.plugin.springsecurity.rememberMe.alwaysRemember = false
 
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'tv.allplayers.AuthenticationToken'

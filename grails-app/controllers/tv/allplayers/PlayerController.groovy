@@ -15,7 +15,6 @@ class PlayerController {
 
     @Secured(['ROLE_USER'])
     def edit() {
-        response.setContentType("application/json")
         if (springSecurityService.isLoggedIn() && springSecurityService.principal.username.equals(params.login)) {
             def result = request.JSON
             def newCompositions = []
@@ -36,6 +35,7 @@ class PlayerController {
             response.status = 200
             render response
         } else {
+            response.setContentType("application/json")
             render "{ error: 'No rights to edit compositions' }";
         }
     }

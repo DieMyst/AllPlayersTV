@@ -1,7 +1,7 @@
 'use strict';
 
 var playerDirectives = angular.module('playerDirectives', []);
-
+'use strict';
 var z = 3;
 
 playerDirectives.directive('resizableDraggable', function () {

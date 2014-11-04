@@ -1,7 +1,7 @@
 'use strict';
 playerApp.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
 
-    var serviceBase = 'http://localhost:8080/AllPlayersTV/';
+    //var serviceBase = 'http://localhost:8080/AllPlayersTV/';
     var authServiceFactory = {};
 
     var _authentication = {
@@ -14,7 +14,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
         _logOut();
         var deferred = $q.defer();
 
-        return $http.post(serviceBase + 'register', registration, { headers: { 'Content-Type': 'application/json' } }).then(function (response) {
+        return $http.post('register', registration, { headers: { 'Content-Type': 'application/json' } }).then(function (response) {
             deferred.resolve(response);
         });
 
@@ -26,7 +26,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
             login: login
         };
 
-        $http.post(serviceBase + 'api/user/' + login, data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+        $http.post('api/user/' + login, data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
             console.log(response);
             deferred.resolve(response);
         }).error(function (err, status) {
@@ -50,7 +50,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
 
         var deferred = $q.defer();
 
-        $http.post(serviceBase + 'api/login', data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+        $http.post('api/login', data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
 
             localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
 
@@ -77,7 +77,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
         _authentication.userName = "";
 
         if (_authentication.isAuth) {
-            $http.post(serviceBase + 'api/logout', "").success(function (response) {
+            $http.post('api/logout', "").success(function (response) {
                 deferred.resolve(response);
             }).error(function (err, status) {
                 deferred.reject(err);

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/services/authInterceptorService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/services/authService.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" charset="windows-1251" />
   </component>
 </project>

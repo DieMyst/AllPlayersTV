@@ -10,7 +10,7 @@ grails.project.source.level = 1.6
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
     //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
-
+    war: [maxMemory: 128, minMemory: 32, debug: false, maxPerm: 256],
     // configure settings for the test-app JVM, uses the daemon by default
     test: false,
     // configure settings for the run-app JVM
@@ -44,8 +44,8 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.29'
-        runtime 'postgresql:postgresql:8.4-702.jdbc3'
+        runtime 'mysql:mysql-connector-java:5.1.29'
+        //runtime 'postgresql:postgresql:8.4-702.jdbc3'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
     }
 
@@ -56,7 +56,8 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
-        compile ":asset-pipeline:1.9.4"
+        compile ":asset-pipeline:1.9.9"
+        compile ":angular-template-asset-pipeline:1.4.0"
         compile ":spring-security-core:2.0-RC4"
         compile ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
         compile ":spring-security-rest:1.4.1.RC1", {
@@ -65,7 +66,7 @@ grails.project.dependency.resolution = {
 
         // plugins needed at runtime but not for compilation
         runtime ":database-migration:1.4.0"
-        runtime ":angular-template-asset-pipeline:1.2.5"
+
         //runtime ":jquery:1.11.1"
 
         // Uncomment these to enable additional asset-pipeline capabilities
