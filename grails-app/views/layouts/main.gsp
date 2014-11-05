@@ -17,6 +17,5 @@
 <div ng-app="playerApp">
     <div ng-view></div>
 </div>
-<g:layoutBody/>
 </body>
 </html>
