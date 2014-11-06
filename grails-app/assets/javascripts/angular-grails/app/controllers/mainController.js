@@ -151,7 +151,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 templateUrl: 'modal-add-composition.html',
                 backdrop: true,
                 windowClass: 'modal',
-                controller: function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
                     $scope.submit = function (input) {
                         if (input != null) {
                             $modalInstance.close(input);
@@ -160,7 +160,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
                     };
-                }
+                }]
             });
             rename.result.then(function (input) {
                 $scope.currentComp.name = input.name;

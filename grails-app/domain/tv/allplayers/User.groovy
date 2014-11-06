@@ -25,6 +25,7 @@ class User {
 
     static mapping = {
         compositions cascade: 'all-delete-orphan'
+        table "`user`"
     }
 
     Set<Role> getAuthorities() {
