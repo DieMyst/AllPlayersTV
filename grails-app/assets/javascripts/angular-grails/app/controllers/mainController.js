@@ -84,7 +84,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 templateUrl: 'modal-add-composition.html',
                 backdrop: true,
                 windowClass: 'modal',
-                controller: function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
                     $scope.submit = function (newComp) {
                         if (newComp != null) {
                             $modalInstance.close(newComp);
@@ -93,7 +93,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
                     };
-                }
+                }]
             });
             addCompForm.result.then(function (newComp) {
                 newComp.frames = [];
@@ -111,7 +111,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 backdrop: true,
                 windowClass: 'modal',
                 scope: scope,
-                controller: function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
                     $scope.submit = function (newFrame) {
                         if (newFrame != null) {
                             $modalInstance.close(newFrame);
@@ -120,7 +120,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
                     };
-                }
+                }]
             });
             scope.newFrame = {
                 type: scope.types[0],

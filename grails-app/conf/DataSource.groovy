@@ -23,7 +23,7 @@ environments {
 
             url = "jdbc:mysql://localhost:3306/allstreams"
             username = "root"
-            password = "root"
+            password = ""
         }
     }
     test {
@@ -35,12 +35,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            driverClassName = "com.mysql.jdbc.Driver"
-            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
-
-            url = "jdbc:mysql://mysql-env-5332935.jelastic.regruhosting.ru/allstreams"
-            username = "allstreams"
-            password = "CMfQULaZ8v9u6zTG"
+            grails.config.locations = ["file:${userHome}/mydb.cfg"]
         }
     }
 }
