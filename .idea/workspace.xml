@@ -1,20 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5719cd36-9edb-4b13-ad08-c3a81281e7d6" name="Default" comment="infinite cycle was because off CRLF and asset-angular-template-plugin, that can escape only LF...">
+    <list default="true" id="5719cd36-9edb-4b13-ad08-c3a81281e7d6" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets\images\ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/images/arrowdown.png" afterPath="$PROJECT_DIR$/grails-app/assets/images/arrowdown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/images/arrowup.png" afterPath="$PROJECT_DIR$/grails-app/assets/images/arrowup.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllPlayersTV-grailsPlugins.iml" afterPath="$PROJECT_DIR$/AllPlayersTV-grailsPlugins.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllPlayersTV.iml" afterPath="$PROJECT_DIR$/AllPlayersTV.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html" afterPath="$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AllPlayersTV.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/classes/" />
+    <ignored path="$PROJECT_DIR$/target/work/gspcompile/" />
+    <ignored path="$PROJECT_DIR$/target/work/plugin-build-classes/" />
+    <ignored path="$PROJECT_DIR$/target/work/plugin-classes/" />
+    <ignored path="$PROJECT_DIR$/target/work/plugin-provided-classes/" />
+    <ignored path="$PROJECT_DIR$/target/work/resources/" />
+    <ignored path="$PROJECT_DIR$/target/work/scriptCache/" />
+    <ignored path="$PROJECT_DIR$/target/work/stage/" />
+    <ignored path="$PROJECT_DIR$/target/work/tomcat/" />
+    <ignored path="$PROJECT_DIR$/target/eclipseclasses/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +63,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config-player-app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config-player-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/config-player-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
               <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DataSource.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
@@ -54,83 +83,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BuildConfig.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1394">
-              <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1394">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="User.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6041665" vertical-offset="204" max-vertical-offset="935">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="935">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainController.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mainController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58219177" vertical-offset="2397" max-vertical-offset="3349">
-              <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="3349">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77374786" vertical-offset="538" max-vertical-offset="3094">
+              <caret line="58" column="49" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2639" max-vertical-offset="3400">
-              <caret line="164" column="28" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2796" max-vertical-offset="3400">
+              <caret line="185" column="28" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1564">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frames.tpl.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="frames.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="1921">
-              <caret line="91" column="46" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1921">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="loginController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/loginController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="391">
               <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding />
             </state>
@@ -153,61 +179,18 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/allplayerstv/Frame.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/tv/allplayers/Frame.groovy" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/tv/allplayers/MainController.groovy" />
-        <option value="$PROJECT_DIR$/web-app/css/main.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/taglib/tv/allplayers/FrameTagLib.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular/app/app.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/ui-app.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/jquery-ui.css" />
-        <option value="$PROJECT_DIR$/test/unit/tv/allplayers/PlayerControllerSpec.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/utils/HashCodec.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/utils/tv/allplayers/HashCodec.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/services.js" />
-        <option value="$PROJECT_DIR$/grails-app/conf/WebXmlConfig.groovy" />
-        <option value="$PROJECT_DIR$/target/work/web.xml.tmp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/tv/allplayers/AuthenticationToken.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/tv/allplayers/service/MyUserDetailsService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers.js" />
-        <option value="$PROJECT_DIR$/target/work/plugins/spring-security-rest-1.4.0/src/groovy/com/odobo/grails/plugin/springsecurity/rest/RestAuthenticationFilter.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/tv/allplayers/UserRole.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/tv/allplayers/UserController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/services/authService.js" />
-        <option value="$PROJECT_DIR$/target/work/plugins/spring-security-rest-1.4.1.RC1/src/groovy/com/odobo/grails/plugin/springsecurity/rest/RestTokenValidationFilter.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/tv/allplayers/Sources.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/tv/allplayers/PlayerController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/app.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/loginController.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/config-app.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/directives.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/run-app.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/templates.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/login.tpl.html" />
-        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html" />
-        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/modal-add-composition.tpl.html" />
-        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/modal-add-frame.tpl.html" />
-        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/register.tpl.html" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/config-player-app.js" />
-        <option value="$PROJECT_DIR$/target/work/plugins/angular-template-asset-pipeline-1.4.0/src/groovy/com/craigburke/angular/TemplateProcessorUtil.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html" />
         <option value="$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -219,7 +202,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -250,8 +233,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,74 +248,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,24 +284,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="allplayers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,6 +349,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AllPlayersTV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AllPlayersTV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -485,40 +402,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllPlayersTV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-grails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -556,8 +439,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AllPlayersTV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AllPlayersTV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -606,11 +513,14 @@
       <recent name="tv.allplayers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\images" />
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\vendor\angular" />
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\vendor\angular\modules" />
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\javascripts" />
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets" />
-      <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\javascripts\angular\app" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tv.allplayers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\web-app\partials" />
@@ -619,20 +529,8 @@
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\stylesheets" />
       <recent name="C:\Users\diemust\Documents\GitHub\AllPlayersTV\grails-app\assets\images" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="tv.allplayers" />
-    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.war dev tomcat">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Grails.Grails:AllPlayersTV">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -649,6 +547,15 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -658,6 +565,19 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -688,17 +608,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -789,6 +699,27 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -860,7 +791,7 @@
     <configuration default="false" name="Grails:AllPlayersTV" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="AllPlayersTV" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="dev run-app -Xlint:deprecation" />
+      <setting name="cmdLine" value="run-app" />
       <setting name="depsClasspath" value="false" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -998,6 +929,7 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="5719cd36-9edb-4b13-ad08-c3a81281e7d6" name="Default" comment="" />
       <created>1406491505026</created>
+      <option name="number" value="Default" />
       <updated>1406491505026</updated>
       <workItem from="1406491508178" duration="2351000" />
       <workItem from="1406494916334" duration="3043000" />
@@ -1059,121 +991,183 @@
       <workItem from="1415213969548" duration="12483000" />
       <workItem from="1415299405886" duration="55000" />
       <workItem from="1415301447276" duration="1438000" />
-      <workItem from="1415302917507" duration="5487000" />
+      <workItem from="1415302917507" duration="6348000" />
+      <workItem from="1415440774537" duration="28000" />
+      <workItem from="1415440938382" duration="8286000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1406494391288</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1406494391288</updated>
     </task>
     <task id="LOCAL-00002" summary="start">
       <created>1406495113319</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1406495113319</updated>
     </task>
     <task id="LOCAL-00003" summary="start">
       <created>1406496604836</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1406496604836</updated>
     </task>
     <task id="LOCAL-00004" summary="start">
       <created>1406496660078</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1406496660078</updated>
     </task>
     <task id="LOCAL-00005" summary="adding resourses, angularjs, experimenting with rendering">
       <created>1406754053510</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1406754053510</updated>
     </task>
     <task id="LOCAL-00006" summary="jquery, draggable, resizeble, some imporvments. yet that does not work">
       <created>1407187075521</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1407187075521</updated>
     </task>
     <task id="LOCAL-00007" summary="replace angular resources for assets.&#10;Going to change gsp to angular model">
       <created>1407301069371</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1407301069371</updated>
     </task>
     <task id="LOCAL-00008" summary="angular began to work. Need to know how to init jquery-ui and repair all front-end">
       <created>1407967602484</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1407967602484</updated>
     </task>
     <task id="LOCAL-00009" summary="night commit, need to sleep">
       <created>1408317940162</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1408317940162</updated>
     </task>
     <task id="LOCAL-00010" summary="adding frame is working now. All people, who didn't read about scopes of angular and js - must read it :)">
       <created>1408569583181</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1408569583181</updated>
     </task>
     <task id="LOCAL-00011" summary="some experiments with html. need to draggable and resizable div over iframe, that change position of iframe">
       <created>1409777478336</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1409777478336</updated>
     </task>
     <task id="LOCAL-00012" summary="some small fix">
       <created>1410846033256</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1410846033256</updated>
     </task>
     <task id="LOCAL-00013" summary="some small fix">
       <created>1410909901121</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1410909901121</updated>
     </task>
     <task id="LOCAL-00014" summary="adding post requests">
       <created>1411425143267</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1411425143267</updated>
     </task>
     <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/origin' into origin&#10;&#10;Conflicts:&#10;&#9;grails-app/assets/templates/player-app/frames.tpl.html&#10;&#9;grails-app/conf/BootStrap.groovy&#10;">
       <created>1411425355946</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1411425355946</updated>
     </task>
     <task id="LOCAL-00016" summary="added possibility of adding compositions&#10;sketch of menu&#10;">
       <created>1411771080583</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1411771080583</updated>
     </task>
     <task id="LOCAL-00017" summary="some fixes, blank for authorization">
       <created>1412034062879</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1412034062879</updated>
     </task>
     <task id="LOCAL-00018" summary="registering users">
       <created>1412112544034</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1412112544034</updated>
     </task>
     <task id="LOCAL-00019" summary="webxml">
       <created>1412570552712</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1412570552712</updated>
     </task>
     <task id="LOCAL-00020" summary="nothing is working, will have an attempts">
       <created>1412900723306</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1412900723306</updated>
     </task>
     <task id="LOCAL-00021" summary="security in backend are working. SaltGenerator, SHA-1 and tokens.">
       <created>1413049278117</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1413049278118</updated>
     </task>
     <task id="LOCAL-00022" summary="some changes due to adding Spring Security">
       <created>1413055660392</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1413055660392</updated>
     </task>
     <task id="LOCAL-00023" summary="did service more RESTfull, editing and getting is in other api addresses">
       <created>1414457199517</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1414457199517</updated>
     </task>
     <task id="LOCAL-00024" summary="added some security in api,  new version of rest, new buttons">
       <created>1414608800263</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1414608800263</updated>
     </task>
     <task id="LOCAL-00025" summary="added shortcuts, possibility to copy compositions to your own acc from another, possibility to change name of composition, new api address &quot;copy&quot;, added chat of sc2tv">
       <created>1414762856726</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1414762856726</updated>
     </task>
     <task id="LOCAL-00026" summary="small fixes, minify js libs&#10;now downloading libs on page are in cycle, don't know why, will check it in future">
       <created>1415135001699</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1415135001699</updated>
     </task>
     <task id="LOCAL-00027" summary="infinite cycle was because off CRLF and asset-angular-template-plugin, that can escape only LF...">
       <created>1415228800467</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1415228800467</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="some fixes, externate datasources parameters">
+      <created>1415309035104</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1415309035104</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299427000" />
+    <option name="totallyTimeSpent" value="308602000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1196,9 +1190,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1214,16 +1209,15 @@
       <window_info id="Jelastic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50278085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37019232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24520256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35372636" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46051168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35372636" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29922137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27190334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23025584" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1235,6 +1229,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1277,7 +1272,8 @@
     <MESSAGE value="added shortcuts, possibility to copy compositions to your own acc from another, possibility to change name of composition, new api address &quot;copy&quot;, added chat of sc2tv" />
     <MESSAGE value="small fixes, minify js libs&#10;now downloading libs on page are in cycle, don't know why, will check it in future" />
     <MESSAGE value="infinite cycle was because off CRLF and asset-angular-template-plugin, that can escape only LF..." />
-    <option name="LAST_COMMIT_MESSAGE" value="infinite cycle was because off CRLF and asset-angular-template-plugin, that can escape only LF..." />
+    <MESSAGE value="some fixes, externate datasources parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes, externate datasources parameters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1291,6 +1287,7 @@
       </breakpoints>
       <option name="time" value="66" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1315,7 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,13 +1351,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/Composition.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7083333" vertical-offset="0" max-vertical-offset="357">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/grails/grails-2.4.2/lib/org.springframework/spring-webmvc/jars/spring-webmvc-4.0.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
@@ -1410,7 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09736541" vertical-offset="0" max-vertical-offset="873">
           <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,13 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="458">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3145">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1457,13 +1445,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/AuthenticationToken.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/tv/allplayers/PlayerController.groovy">
@@ -1474,13 +1462,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/Frame.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="374">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
@@ -1508,9 +1496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="852">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1588,31 +1573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/config-player-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="1921">
-          <caret line="91" column="46" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,22 +1580,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5503597" vertical-offset="0" max-vertical-offset="1479">
           <caret line="36" column="102" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1564">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1462">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1648,37 +1599,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="935">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2537" max-vertical-offset="3400">
-          <caret line="164" column="28" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2796" max-vertical-offset="3400">
+          <caret line="185" column="28" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/config-player-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1394">
-          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/tv/allplayers/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6041665" vertical-offset="204" max-vertical-offset="935">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1394">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/angular-grails/app/controllers/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58219177" vertical-offset="2397" max-vertical-offset="3349">
-          <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="3349">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/templates/player-app/frames.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1921">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77374786" vertical-offset="538" max-vertical-offset="3094">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1690,7 +1681,7 @@
         <entry key="AllPlayersTV">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="1008802369" />
+              <option name="buildConfigCrc" value="1009288880" />
               <option name="pluginDependenciesCrc" value="-1361089015" />
               <option name="properties">
                 <map>
@@ -1791,4 +1782,3 @@
     </states>
   </component>
 </project>
-

@@ -182,7 +182,7 @@
           <root url="jar://C:/grails/grails-2.4.4/lib/net.java.dev.jna/jna/jars/jna-4.0.0.jar!/" />
           <root url="jar://C:/grails/grails-2.4.4/lib/org.apache.ant/ant-junit/jars/ant-junit-1.8.4.jar!/" />
           <root url="jar://C:/grails/grails-2.4.4/lib/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/9.3-1100-jdbc41/postgresql-9.3-1100-jdbc41.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.29/mysql-connector-java-5.1.29.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -200,4 +200,3 @@
     <orderEntry type="library" name="grails-2.4.4" level="application" />
   </component>
 </module>
-

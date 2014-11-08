@@ -34,7 +34,6 @@ iframe {
 }
 
 #box {
-    width: 100%;
     font-size: 12px;
     line-height: 20px;
     bottom: -1px;
@@ -51,10 +50,8 @@ iframe {
     z-index: 99;
 }
 
-#tab li span {
-    display: block;
-    padding: 0 5px;
-    position: relative;
+#tab li img {
+    height: 60px;
 }
 
 #links {
@@ -70,13 +67,13 @@ iframe {
     -webkit-transition: margin-bottom .4s ease-in;
 }
 
-/*.hideMenu {
-    margin-bottom: 0;
+.hideMenu {
+    margin-bottom: -16px;
 }
 
 .showMenu {
-    margin-bottom: 57px;
-}*/
+    width: 100%;
+}
 
 #arrow, .bt {
     cursor: pointer;

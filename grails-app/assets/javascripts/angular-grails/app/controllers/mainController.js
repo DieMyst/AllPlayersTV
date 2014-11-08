@@ -43,19 +43,19 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 }, delayTime);
             }
 
+            var box = $("#box");
             var img = document.getElementById(id);
-            var box = $scope.menuClass;
-            if (box == "hideMenu") {
-                $scope.menuClass = 'showMenu';
+            if (box.hasClass("hideMenu")) {
+                box.switchClass('hideMenu', 'showMenu', 0, 'none');
                 $('#deco').show( "drop",
                     {direction: "down"}, 400 );
                 delay(img, $scope.fullJson.menuarrow.arrowdown, 400);
             }
             else {
-                $scope.menuClass = 'hideMenu';
                 $('#deco').hide( "drop",
                     {direction: "down"}, 400 );
                 delay(img, $scope.fullJson.menuarrow.arrowup, 400);
+                box.switchClass('showMenu', 'hideMenu', 0, 'none');
             }
 
         };
