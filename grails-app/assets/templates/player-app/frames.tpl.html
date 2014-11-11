@@ -1,4 +1,4 @@
-<!--<pre>{{fullJson | json}}</pre>-->
+<pre>{{fullJson | json}}</pre>
 <div id="box" class="showMenu">
     <ul id="tab">
         <li>
@@ -24,6 +24,10 @@
             <ANY ng-if="fullJson.isLogged == true">
                 <button ng-if="fullJson.canEdit == false && currentComp != null" class="bt" ng-click="copyComp()">Copy</button>
                 <button class="bt" ng-click="logOut()">Logout</button>
+                <label>
+                    Autosave
+                    <input type="checkbox" ng-model="fullJson.user.autoSave">
+                </label>
             </ANY>
             <button ng-if="fullJson.isLogged == false" class="bt" ng-click="logIn()">Login</button>
         </div>

@@ -22,6 +22,8 @@ class PlayerController {
             def user = User.findByUsername(params.login)
             user.compositions.clear()
 
+            user.autoSave = result.user.autoSave;
+
             newCompositions.each { comp ->
                 comp.frames.each { frame ->
                     if (frame != null) {

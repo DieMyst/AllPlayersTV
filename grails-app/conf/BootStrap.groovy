@@ -56,6 +56,7 @@ class BootStrap {
         JSON.registerObjectMarshaller(User) { User jUser ->
             return [
                     login: jUser.username,
+                    autoSave: jUser.autoSave,
                     compositions: jUser.compositions
             ]
         }
