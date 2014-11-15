@@ -1,4 +1,4 @@
-<pre>{{fullJson | json}}</pre>
+<!--<pre>{{fullJson | json}}</pre>-->
 <div id="box" class="showMenu">
     <ul id="tab">
         <li>
@@ -82,7 +82,7 @@
         <ANY ng-switch-when="2">
             <ANY ng-if="frame.type == 'stream'">
                 <iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
-                        ng-src="{{trustSrc('http://api.cybergame.tv/p/embed.php?c='+frame.streamSource+'&w=200pc&h=100pc&type=embed')}}"
+                        ng-src="{{trustSrc('http://api.cybergame.tv/p/embed.php?c='+frame.streamSource+'&w='+frame.width+'&h='+frame.height+'&type=embed')}}"
                         ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
                 </iframe>
             </ANY>
@@ -104,7 +104,8 @@
     </ANY>
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
-         ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}">
+         ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}"
+         style="display: none;">
         <button class="close" style="font-size: 30px; padding: 10px;" ng-click="close(currentComp.frames, $index)">X
         </button>
     </div>

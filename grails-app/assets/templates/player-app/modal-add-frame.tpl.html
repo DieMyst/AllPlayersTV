@@ -4,10 +4,12 @@
             <input type="text" placeholder="Source address" ng-model="newFrame.streamSource"/>
         </label>
         <label>Sources
-            <select ng-options="source.source for source in sources track by source.value" ng-model="newFrame.sourceType"></select>
+            <select ng-change="updateSource()" ng-options="source.source for source in sources track by source.value" ng-model="newFrame.sourceType"></select>
         </label>
         <label>Stream or chat
-            <select ng-model="newFrame.type" ng-options="o as o for o in types">
+            <select ng-init="newFrame.type = newFrame.type || options[0].value" ng-model="newFrame.type">
+                <option value="stream" ng-if="newFrame.sourceType.stream == true">Stream</option>
+                <option value="chat" ng-if="newFrame.sourceType.chat == true">Chat</option>
             </select>
         </label>
     </div>

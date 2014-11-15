@@ -155,7 +155,6 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/favicon.ico': ['permitAll']
 ]
 
-log.error "file:${userHome}/mydb.groovy"
 grails.config.locations = ["file:${userHome}/mydb.groovy"]
 
 dataSource {
@@ -183,7 +182,7 @@ environments {
 
             url = "jdbc:mysql://localhost:3306/allstreams"
             username = "root"
-            password = ""
+            password = "root"
         }
     }
     test {

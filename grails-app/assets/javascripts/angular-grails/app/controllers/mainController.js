@@ -3,7 +3,7 @@
 playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService',
     function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService) {
         $scope.menuClass = 'showMenu';
-        $scope.editable = true;
+        $scope.editable = false;
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function(response) {
             $scope.fullJson = response;
@@ -119,6 +119,11 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                     };
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
+                    };
+                    $scope.updateSource = function() {
+                        if ($scope.newFrame.sourceType.stream == false) {
+                            $scope.newFrame.type = "chat";
+                        }
                     };
                 }]
             });

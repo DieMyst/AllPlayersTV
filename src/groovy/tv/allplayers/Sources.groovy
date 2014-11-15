@@ -5,6 +5,9 @@ package tv.allplayers
 class Sources {
     int value
     String source
+    boolean stream;
+    boolean chat;
+
     private static def sourcesList = []
 
     public final static int TWITCH = 0
@@ -13,10 +16,10 @@ class Sources {
     public final static int SC2TV = 3
 
     static {
-        sourcesList.add(new Sources(value: TWITCH, source: "Twitch"))
-        sourcesList.add(new Sources(value: GG, source: "GoodGame"))
-        sourcesList.add(new Sources(value: CYBERGAME, source: "Cybergame"))
-        sourcesList.add(new Sources(value: SC2TV, source: "SC2TV "))
+        sourcesList.add(new Sources(value: TWITCH, source: "Twitch", stream: true, chat: true))
+        sourcesList.add(new Sources(value: GG, source: "GoodGame", stream: true, chat: true))
+        sourcesList.add(new Sources(value: CYBERGAME, source: "Cybergame", stream: true, chat: true))
+        sourcesList.add(new Sources(value: SC2TV, source: "SC2TV ", stream: false, chat: true))
     }
     public static def getSources() {
         sourcesList
