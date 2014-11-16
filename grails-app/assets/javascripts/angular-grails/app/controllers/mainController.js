@@ -1,7 +1,7 @@
 'use strict';
 
-playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService',
-    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService) {
+playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService',
+    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService) {
         $scope.menuClass = 'showMenu';
         $scope.editable = false;
         $scope.fullJson = "";
@@ -24,17 +24,9 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             $scope.currentComp = null;
         };
 
-        $scope.saveJson = function () {
-            console.log('call saveJson');
-            console.log($scope.fullJson);
-            $http
-                .post('api/user/' + $routeParams.login + "/edit", $scope.fullJson)
-                .success(function (data, status, headers, config) {
-                console.log('success saveJson');
-            })
-                .error(function (data, status, headers, config) {
-                });
-        };
+        $scope.saveJson = function() {
+            saveService.saveUser($scope.fullJson);
+        }
 
         $scope.toggle = function (id) {
             function delay(elem, src, delayTime) {
