@@ -4,13 +4,18 @@ var playerDirectives = angular.module('playerDirectives', []);
 'use strict';
 var z = 3;
 
-playerDirectives.directive('resizableDraggable', function () {
+playerDirectives.directive('resizableDraggable', ['saveService', function (saveService) {
 
     return {
         restrict: 'A',
         link: function (scope, elem) {
             scope.close = function(frames, index) {
                 frames.splice(index, 1);
+            };
+            var saving = function() {
+                if (scope.$parent.fullJson.user.autoSave == true) {
+                    saveService.saveUser(scope.$parent.fullJson);
+                }
             };
             elem.resizable(
                 {
@@ -25,6 +30,7 @@ playerDirectives.directive('resizableDraggable', function () {
                         scope.frame.width = elem.css('width');
                         scope.frame.height = elem.css('height');
                         scope.$apply();
+                        saving();
                     }
                 }
             ).draggable(
@@ -53,7 +59,8 @@ playerDirectives.directive('resizableDraggable', function () {
                     stop: function() {
                         scope.frame.positionY = elem.css('top');
                         scope.frame.positionX = elem.css('left');
-                        scope.$apply()
+                        scope.$apply();
+                        saving();
                     }
                 }
             );
@@ -62,6 +69,9 @@ playerDirectives.directive('resizableDraggable', function () {
             if (elem.is('.ui-draggable') || (/absolute/).test(elem.css('position'))) {
                 elem.css({position: 'absolute'});
             }
+            if (scope.$parent.editable == false) {
+                elem.display = 'none';
+            }
         }
     };
-});
+}]);
