@@ -29,8 +29,6 @@ grails.project.dependency.resolution = {
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
-        inherits true // Whether to inherit repository definitions from plugins
-
         grailsPlugins()
         grailsHome()
         mavenLocal()
@@ -57,7 +55,7 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.9"
-        compile ":angular-template-asset-pipeline:1.4.0"
+        compile ":angular-template-asset-pipeline:1.4.1"
         compile ":spring-security-core:2.0-RC4"
         compile ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
         compile ":spring-security-rest:1.4.1.RC2"
