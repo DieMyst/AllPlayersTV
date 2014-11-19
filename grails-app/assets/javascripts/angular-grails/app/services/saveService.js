@@ -17,11 +17,11 @@ playerApp.factory('saveService', ['$http', '$routeParams', function ($http, $rou
 
                 var message = $("#saveMessage");
                 message.show( "fade",
-                    200 );
+                    100 );
                 window.setTimeout(function () {
                     message.hide( "fade",
                         1000 );
-                }, 200);
+                }, 100);
             })
             .error(function (data, status, headers, config) {
             });

@@ -4,19 +4,15 @@ var playerDirectives = angular.module('playerDirectives', []);
 'use strict';
 var z = 3;
 
-playerDirectives.directive('resizableDraggable', ['saveService', function (saveService) {
+playerDirectives.directive('resizableDraggable', [function () {
 
     return {
         restrict: 'A',
+        scope: {
+            frame: '=frame'
+        },
         link: function (scope, elem) {
-            scope.close = function(frames, index) {
-                frames.splice(index, 1);
-            };
-            var saving = function() {
-                if (scope.$parent.fullJson.user.autoSave == true) {
-                    saveService.saveUser(scope.$parent.fullJson);
-                }
-            };
+
             elem.resizable(
                 {
                     resize: function (event, ui) {
@@ -30,7 +26,6 @@ playerDirectives.directive('resizableDraggable', ['saveService', function (saveS
                         scope.frame.width = elem.css('width');
                         scope.frame.height = elem.css('height');
                         scope.$apply();
-                        saving();
                     }
                 }
             ).draggable(
@@ -60,7 +55,6 @@ playerDirectives.directive('resizableDraggable', ['saveService', function (saveS
                         scope.frame.positionY = elem.css('top');
                         scope.frame.positionX = elem.css('left');
                         scope.$apply();
-                        saving();
                     }
                 }
             );

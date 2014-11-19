@@ -23,7 +23,8 @@
                         ng-model="currentComp"></select>
             </label>
             <ANY ng-if="fullJson.isLogged == true">
-                <button ng-if="fullJson.canEdit == false && currentComp != null" class="bt" ng-click="copyComp()">Copy</button>
+                <button ng-if="fullJson.canEdit == false && currentComp != null" class="bt" ng-click="copyComp()">Copy
+                </button>
                 <button class="bt" ng-click="logOut()">Logout</button>
                 <label>
                     Autosave
@@ -106,9 +107,8 @@
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
          ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}"
-         parent="$parent"
          frame="frame">
-        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="close(currentComp.frames, $index)">X
+        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="$parent.close(currentComp.frames, $index)">X
         </button>
     </div>
 </div>

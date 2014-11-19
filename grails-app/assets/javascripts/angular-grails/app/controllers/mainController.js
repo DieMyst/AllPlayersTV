@@ -14,6 +14,22 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             $location.path("/login");
         };
 
+        var autoSaving = function() {
+            if ($scope.fullJson.user.autoSave == true) {
+                saveService.saveUser($scope.fullJson);
+            }
+        };
+
+        $scope.$watch("fullJson.user.compositions", function(newValue, oldValue) {
+            if (!isUndefined(oldValue)) {
+                autoSaving();
+            }
+        }, true);
+
+        $scope.close = function(frames, index) {
+            frames.splice(index, 1);
+        };
+
         $scope.logIn = function () {
             $location.path("/login");
         };
