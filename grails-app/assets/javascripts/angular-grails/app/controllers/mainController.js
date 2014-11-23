@@ -42,7 +42,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
 
         $scope.saveJson = function() {
             saveService.saveUser($scope.fullJson);
-        }
+        };
 
         $scope.toggle = function (id) {
             function delay(elem, src, delayTime) {

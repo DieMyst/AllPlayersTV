@@ -45,7 +45,8 @@
                         ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}"
                         id="frame{{currentComp.frames.indexOf(frame)}}"
                         data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={CHANNEL}"
-                        bgcolor="#000000">
+                        bgcolor="#000000"
+                        wmode="opaque">
                     <param name="allowFullScreen"
                            value="true"/>
                     <param name="allowScriptAccess"

@@ -5,8 +5,9 @@ package tv.allplayers
 class Sources {
     int value
     String source
-    boolean stream;
-    boolean chat;
+    boolean stream
+    boolean chat
+    String hint
 
     private static def sourcesList = []
 
