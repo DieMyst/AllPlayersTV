@@ -93,7 +93,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://allplayers.elasticbeanstalk.com/"
     }
 }
 
@@ -189,6 +189,26 @@ environments {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+        }
+    }
+    production {
+        dataSource {
+            username = "root"
+            password = "rootroot"
+            pooled = true
+            dbCreate = "update"
+            driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://" + System.getProperty("JDBC_CONNECTION_STRING")
+            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+            properties {
+                validationQuery = "SELECT 1"
+                testOnBorrow = true
+                testOnReturn = true
+                testWhileIdle = true
+                timeBetweenEvictionRunsMillis = 1800000
+                numTestsPerEvictionRun = 3
+                minEvictableIdleTimeMillis = 1800000
+            }
         }
     }
 }
