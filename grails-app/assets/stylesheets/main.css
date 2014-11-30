@@ -193,3 +193,11 @@ iframe {
     font-size: 25px;
 }
 
+.left-modal {
+    float: left;
+    width: 65%
+}
+.right-modal {
+    float: right;
+    width: 35%
+}

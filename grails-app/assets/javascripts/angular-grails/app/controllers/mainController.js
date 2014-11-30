@@ -189,14 +189,29 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 $scope.edit();
             }
         });
+        $(document).bind('keydown', 'у', function(){
+            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+                $scope.edit();
+            }
+        });
 
         $(document).bind('keydown', 's', function(){
             if ($scope.fullJson.canEdit === true) {
                 $scope.saveJson();
             }
         });
+        $(document).bind('keydown', 'ы', function(){
+            if ($scope.fullJson.canEdit === true) {
+                $scope.saveJson();
+            }
+        });
 
         $(document).bind('keydown', 'a', function(){
+            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+                $scope.open();
+            }
+        });
+        $(document).bind('keydown', 'ф', function(){
             if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
                 $scope.open();
             }
