@@ -63,7 +63,7 @@
                 <iframe frameborder="0"
                         scrolling="no"
                         id="frame{{currentComp.frames.indexOf(frame)}}"
-                        src="{{trustSrc('http://twitch.tv/chat/embed?channel='+frame.streamSource+'&amp;popout_chat=true')}}"
+                        ng-src="{{trustSrc('http://twitch.tv/chat/embed?channel='+frame.streamSource+'&amp;popout_chat=true')}}"
                         ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
                 </iframe>
             </ANY>
