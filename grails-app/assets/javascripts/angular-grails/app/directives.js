@@ -55,7 +55,10 @@ playerDirectives.directive('resizableDraggable', [function () {
                         scope.frame.positionY = elem.css('top');
                         scope.frame.positionX = elem.css('left');
                         scope.$apply();
-                    }
+                    },
+                    snap: ".bar,html",
+                    stack: ".outer",
+                    snapTolerance: 10
                 }
             );
 
@@ -69,3 +72,21 @@ playerDirectives.directive('resizableDraggable', [function () {
         }
     };
 }]);
+
+playerDirectives.directive('userValidation', function() {
+    return {
+        require: 'ngModel',
+        restrict: 'A',
+        link: function(scope, elm, attrs, ctrl) {
+            ctrl.$parsers.unshift(function(username) {
+                if (/^[a-zA-Zа-яА-Я0-9_-]{3,16}$/.test(username)) {
+                    ctrl.$setValidity('username', true);
+                    return username;
+                } else {
+                    ctrl.$setValidity('username', false);
+                    return undefined;
+                }
+            });
+        }
+    };
+});

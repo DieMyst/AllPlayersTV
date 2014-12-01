@@ -44,7 +44,7 @@
                 <object type="application/x-shockwave-flash"
                         ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}"
                         id="frame{{currentComp.frames.indexOf(frame)}}"
-                        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={CHANNEL}"
+                        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{frame.streamSource}}"
                         bgcolor="#000000"
                         wmode="opaque">
                     <param name="allowFullScreen"

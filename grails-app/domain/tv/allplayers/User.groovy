@@ -20,7 +20,11 @@ class User {
     static transients = ['springSecurityService']
 
     static constraints = {
-        username(blank: false, unique: true)
+        username(
+                blank: false,
+                unique: true,
+                matches: /^[a-zA-Zà-ÿÀ-ß0-9_-]{3,16}$/
+        )
         password(blank: false)
         salt(nullable: true, maxSize: 64)
     }

@@ -3,6 +3,7 @@ playerApp.controller('SignupCtrl', ['$scope', '$location', '$timeout', 'authServ
 
     $scope.savedSuccessfully = false;
     $scope.message = "";
+    $scope.submitted = false;
 
     $scope.registration = {
         userName: "",
@@ -11,7 +12,6 @@ playerApp.controller('SignupCtrl', ['$scope', '$location', '$timeout', 'authServ
     };
 
     $scope.signUp = function () {
-
         authService.saveRegistration($scope.registration).then(function (response) {
 
                 $scope.savedSuccessfully = true;

@@ -1,3 +1,8 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 iframe {
     display: block;
     position: absolute;
@@ -42,16 +47,16 @@ iframe {
 }
 
 #tab {
-    float: left;
+    float: right;
     list-style: none outside none;
-    margin: 0 0 0 -3px;
+    margin: 0;
     padding: 0;
     position: relative;
     z-index: 99;
 }
 
 #tab li img {
-    height: 60px;
+    height: 40px;
 }
 
 #links {
@@ -68,7 +73,8 @@ iframe {
 }
 
 .hideMenu {
-    margin-bottom: -16px;
+    margin-bottom: -10px;
+    right: 0px;
 }
 
 .showMenu {

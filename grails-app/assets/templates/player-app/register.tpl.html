@@ -1,8 +1,9 @@
-<form class="form-signin">
+<form name="loging" class="form-signin">
     <h2 class="form-signin-heading">Sign up</h2>
+    <span class="text-error" ng-show="loging.username.$error.username">Вы можете использовать только буквы, цифры и знаки: '_', '-'</span>
     <span class="text-error">{{message}}</span>
-    <input class="form-control" placeholder="Username" ng-model="registration.userName">
+    <input user-validation name="username" class="form-control" placeholder="Username" ng-model="registration.userName">
     <input type="password" class="form-control" placeholder="Password" ng-model="registration.password">
     <input type="password" class="form-control" placeholder="Confirm password" ng-model="registration.confirmPassword">
-    <button class="btn-first btn btn-large btn-primary btn-block" ng-click="signUp()">Register</button>
+    <button class="btn-first btn btn-large btn-primary btn-block" ng-click="signUp()" ng-disabled="loging.username.$pristine || loging.username.$error.username">Register</button>
 </form>
