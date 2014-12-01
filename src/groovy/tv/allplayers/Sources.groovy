@@ -24,7 +24,7 @@ class Sources {
         sourcesList.add(new Sources(value: GG, source: "GoodGame", stream: true, chat: true, hint: ggHint))
         def cybergameHint = "Введите ник стримера на CyberGame.tv"
         sourcesList.add(new Sources(value: CYBERGAME, source: "Cybergame", stream: true, chat: true, hint: cybergameHint))
-        def sc2tvHint = "Введите id стримера на sc2tv.ru. id можно узнать, если навести на ник стримера в верхней части чата на канале стримера"
+        def sc2tvHint = "Введите id стримера на sc2tv.ru. id можно узнать, если навести на \"stream\" в верхней части чата на канале стримера"
         sourcesList.add(new Sources(value: SC2TV, source: "SC2TV", stream: false, chat: true, hint: sc2tvHint))
         def hitboxHint = "Введите ник стримера на hitbox.tv"
         sourcesList.add(new Sources(value: HITBOX, source: "hitbox", stream: true, chat: true, hint: hitboxHint))
