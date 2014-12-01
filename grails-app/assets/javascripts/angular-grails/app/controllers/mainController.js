@@ -3,7 +3,7 @@
 playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService',
     function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService) {
         $scope.menuClass = 'showMenu';
-        $scope.editable = false;
+        $scope.editable = true;
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function(response) {
             $scope.fullJson = response;
