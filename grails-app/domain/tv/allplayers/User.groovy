@@ -23,7 +23,7 @@ class User {
         username(
                 blank: false,
                 unique: true,
-                matches: /^[a-zA-Z‡-ˇ¿-ﬂ0-9_-]{3,16}$/
+                matches: /^[a-zA-Z–∞-—è–ê-–Ø0-9_-]{3,16}$/
         )
         password(blank: false)
         salt(nullable: true, maxSize: 64)

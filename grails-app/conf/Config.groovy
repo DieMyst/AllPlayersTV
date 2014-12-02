@@ -61,8 +61,6 @@ grails {
     }
 }
 
-
-grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
 
@@ -178,11 +176,12 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
-            dialect = "org.hibernate.dialect.MySQLMyISAMDialect"
+            dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
 
-            url = "jdbc:mysql://localhost:3306/allstreams"
+            url = "jdbc:mysql://localhost:3306/allstreams?useUnicode=true&characterEncoding=utf-8"
             username = "root"
             password = "root"
+            logSql = true
         }
     }
     test {
@@ -199,7 +198,7 @@ environments {
             dbCreate = "update"
             driverClassName = "com.mysql.jdbc.Driver"
             url = "jdbc:mysql://" + System.getProperty("JDBC_CONNECTION_STRING")
-            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+            dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
             properties {
                 validationQuery = "SELECT 1"
                 testOnBorrow = true

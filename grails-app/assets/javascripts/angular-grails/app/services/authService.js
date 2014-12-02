@@ -14,7 +14,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
         _logOut();
         var deferred = $q.defer();
 
-        return $http.post('register', registration, { headers: { 'Content-Type': 'application/json' } }).then(function (response) {
+        return $http.post('register', registration, { headers: { 'Content-Type': 'application/json;charset=UTF-8' } }).then(function (response) {
             deferred.resolve(response);
         });
 
