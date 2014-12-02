@@ -5,7 +5,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
         $scope.menuClass = 'showMenu';
         $scope.editable = true;
         $scope.fullJson = "";
-        authService.getFullJson($routeParams.login).then(function(response) {
+        authService.getFullJson($routeParams.login).then(function (response) {
             $scope.fullJson = response;
         });
 
@@ -14,19 +14,19 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             $location.path("/login");
         };
 
-        var autoSaving = function() {
+        var autoSaving = function () {
             if ($scope.fullJson.user.autoSave == true) {
                 saveService.saveUser($scope.fullJson);
             }
         };
 
-        $scope.$watch("fullJson.user.compositions", function(newValue, oldValue) {
+        $scope.$watch("fullJson.user.compositions", function (newValue, oldValue) {
             if (!isUndefined(oldValue)) {
                 autoSaving();
             }
         }, true);
 
-        $scope.close = function(frames, index) {
+        $scope.close = function (frames, index) {
             frames.splice(index, 1);
         };
 
@@ -40,7 +40,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             $scope.currentComp = null;
         };
 
-        $scope.saveJson = function() {
+        $scope.saveJson = function () {
             saveService.saveUser($scope.fullJson);
         };
 
@@ -55,13 +55,13 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             var img = document.getElementById(id);
             if (box.hasClass("hideMenu")) {
                 box.switchClass('hideMenu', 'showMenu', 0, 'none');
-                $('#deco').show( "drop",
-                    {direction: "down"}, 400 );
+                $('#deco').show("drop",
+                    {direction: "down"}, 400);
                 delay(img, $scope.fullJson.menuarrow.arrowdown, 400);
             }
             else {
-                $('#deco').hide( "drop",
-                    {direction: "down"}, 400 );
+                $('#deco').hide("drop",
+                    {direction: "down"}, 400);
                 delay(img, $scope.fullJson.menuarrow.arrowup, 400);
                 box.switchClass('showMenu', 'hideMenu', 0, 'none');
             }
@@ -87,7 +87,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             }
         };
 
-        $scope.addComp = function() {
+        $scope.addComp = function () {
             var addCompForm = $modal.open({
                 templateUrl: 'modal-add-composition.html',
                 backdrop: true,
@@ -128,7 +128,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
                     };
-                    $scope.updateSource = function() {
+                    $scope.updateSource = function () {
                         if ($scope.newFrame.sourceType.stream == false) {
                             $scope.newFrame.type = "chat";
                         }
@@ -149,7 +149,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             });
         };
 
-        $scope.copyComp = function() {
+        $scope.copyComp = function () {
             $http
                 .post("api/user/copy", $scope.currentComp)
                 .success(function (data, status, headers, config) {
@@ -180,38 +180,38 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             });
         };
 
-        $(document).bind('keydown', 'space', function(){
+        $(document).bind('keydown', 'space', function () {
             $scope.toggle('arrow');
         });
 
-        $(document).bind('keydown', 'e', function(){
+        $(document).bind('keydown', 'e', function () {
             if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
                 $scope.edit();
             }
         });
-        $(document).bind('keydown', 'у', function(){
+        $(document).bind('keydown', 'у', function () {
             if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
                 $scope.edit();
             }
         });
 
-        $(document).bind('keydown', 's', function(){
+        $(document).bind('keydown', 's', function () {
             if ($scope.fullJson.canEdit === true) {
                 $scope.saveJson();
             }
         });
-        $(document).bind('keydown', 'ы', function(){
+        $(document).bind('keydown', 'ы', function () {
             if ($scope.fullJson.canEdit === true) {
                 $scope.saveJson();
             }
         });
 
-        $(document).bind('keydown', 'a', function(){
+        $(document).bind('keydown', 'a', function () {
             if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
                 $scope.open();
             }
         });
-        $(document).bind('keydown', 'ф', function(){
+        $(document).bind('keydown', 'ф', function () {
             if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
                 $scope.open();
             }
