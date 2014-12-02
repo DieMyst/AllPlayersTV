@@ -4,6 +4,8 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     //var serviceBase = 'http://localhost:8080/AllPlayersTV/';
     var authServiceFactory = {};
 
+    var contentType = "application/json;charset=UTF-8";
+
     var _authentication = {
         isAuth: false,
         userName : ""
@@ -14,7 +16,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
         _logOut();
         var deferred = $q.defer();
 
-        return $http.post('register', registration, { headers: { 'Content-Type': 'application/json;charset=UTF-8' } }).then(function (response) {
+        return $http.post('register', registration, { headers: { 'Content-Type': contentType } }).then(function (response) {
             deferred.resolve(response);
         });
 
@@ -26,7 +28,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
             login: login
         };
 
-        $http.post('api/user/' + login, data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+        $http.post('api/user/' + login, data, { headers: { 'Content-Type': contentType } }).success(function (response) {
             console.log(response);
             deferred.resolve(response);
         }).error(function (err, status) {
@@ -50,7 +52,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
 
         var deferred = $q.defer();
 
-        $http.post('api/login', data, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+        $http.post('api/login', data, { headers: { 'Content-Type': contentType } }).success(function (response) {
 
             localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
 
