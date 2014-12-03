@@ -3,11 +3,13 @@
 playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService',
     function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService) {
         $scope.menuClass = 'showMenu';
-        $scope.editable = true;
+
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function (response) {
             $scope.fullJson = response;
         });
+
+        $scope.editable = $scope.fullJson.isLogged;
 
         $scope.logOut = function () {
             authService.logOut();
@@ -73,16 +75,9 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
         };
 
         $scope.edit = function () {
-            var bars = $(".bar");
             if ($scope.editable) {
-                for (var i = 0; i < bars.length; i++) {
-                    bars[i].style.display = "none";
-                }
                 $scope.editable = false;
             } else {
-                for (i = 0; i < bars.length; i++) {
-                    bars[i].style.display = "block";
-                }
                 $scope.editable = true;
             }
         };
@@ -185,13 +180,15 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
         });
 
         $(document).bind('keydown', 'e', function () {
-            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+            if ($scope.currentComp != null) {
                 $scope.edit();
+                $scope.$digest();
             }
         });
         $(document).bind('keydown', 'у', function () {
-            if ($scope.fullJson.canEdit === true && $scope.currentComp != null) {
+            if ($scope.currentComp != null) {
                 $scope.edit();
+                $scope.$digest();
             }
         });
 

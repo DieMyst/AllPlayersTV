@@ -8,10 +8,10 @@
     </ul>
     <div id="buttons">
         <div id="deco">
+            <button ng-show="currentComp != null" class="bt" ng-click="edit()">Edit</button>
+            <button ng-show="currentComp != null" class="bt" ng-click="open(fullJson.sources)">Add frame</button>
             <ANY ng-if="fullJson.canEdit == true">
                 <ANY ng-if="currentComp != null">
-                    <button class="bt" ng-click="edit()">Edit</button>
-                    <button class="bt" ng-click="open(fullJson.sources)">Add frame</button>
                     <button class="bt" ng-click="deleteComp()">Delete comp</button>
                     <button class="bt" ng-click="renameComp()">Rename comp</button>
                 </ANY>
@@ -122,8 +122,10 @@
     <div id="edit{{currentComp.frames.indexOf(frame)}}" resizable-draggable class="bar"
          ng-model="currentComp.frames[currentComp.frames.indexOf(frame)]"
          ng-style="{left:frame.positionX, top:frame.positionY, position: 'absolute', width:frame.width, height:frame.height}"
-         frame="frame">
-        <button class="close" style="font-size: 30px; padding: 10px;" ng-click="$parent.close(currentComp.frames, $index)">X
+         frame="frame"
+         ng-show="editable">
+        <button class="close" style="font-size: 30px; padding: 10px;"
+                ng-click="$parent.close(currentComp.frames, $index)">X
         </button>
     </div>
 </div>
