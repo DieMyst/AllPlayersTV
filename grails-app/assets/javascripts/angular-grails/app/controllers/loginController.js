@@ -23,4 +23,8 @@ playerApp.controller('LoginCtrl', ['$scope', '$routeParams', '$http', '$location
         $scope.goToReg = function () {
             $location.path("register");
         };
+
+        $scope.tryIt = function () {
+            $location.path("user/anonymous");
+        };
     }]);
