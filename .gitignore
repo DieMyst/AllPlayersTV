@@ -1,4 +1,6 @@
 *.iws
+*.iml
+workspace.xml
 *Db.properties
 *Db.script
 .settings

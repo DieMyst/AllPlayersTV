@@ -1,0 +1,4 @@
+<iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
+        ng-src="{{trustSrc('http://chat.sc2tv.ru/index.htm?channelId='+frame.streamSource+'&fullScreen=1&width='+frame.width+'&height='+frame.height)}}"
+        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height, 'background-color':'black'}">
+</iframe>

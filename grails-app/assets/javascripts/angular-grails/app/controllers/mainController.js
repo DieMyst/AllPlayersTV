@@ -74,12 +74,30 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
             return $sce.trustAsResourceUrl(src);
         };
 
-        $scope.edit = function () {
-            if ($scope.editable) {
-                $scope.editable = false;
-            } else {
-                $scope.editable = true;
+        $scope.getSourceTemplate = function(source, type) {
+            var sourceName;
+            switch (source) {
+                case 0:
+                    sourceName = 'twitch';
+                    break;
+                case 1:
+                    sourceName = 'gg';
+                    break;
+                case 2:
+                    sourceName = 'cybergame';
+                    break;
+                case 3:
+                    sourceName = 'sc2tv';
+                    break;
+                case 4:
+                    sourceName = 'hitbox';
+                    break;
             }
+            return sourceName + '-' + type + '.html';
+        };
+
+        $scope.edit = function () {
+            $scope.editable = !$scope.editable;
         };
 
         $scope.addComp = function () {
