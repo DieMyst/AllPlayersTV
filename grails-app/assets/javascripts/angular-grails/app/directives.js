@@ -22,7 +22,7 @@ playerDirectives.directive('resizableDraggable', [function () {
                         var frame = $(frameId);
                         frame.width(newWd).height(newHt);
                     },
-                    stop: function() {
+                    stop: function () {
                         scope.frame.width = elem.css('width');
                         scope.frame.height = elem.css('height');
                         scope.$apply();
@@ -49,9 +49,9 @@ playerDirectives.directive('resizableDraggable', [function () {
                         var frameId = "#" + this.id.replace("edit", "frame");
                         var frame = $(frameId);
 
-                        frame.css({top:  posTop, left: posLeft});
+                        frame.css({top: posTop, left: posLeft});
                     },
-                    stop: function() {
+                    stop: function () {
                         scope.frame.positionY = elem.css('top');
                         scope.frame.positionX = elem.css('left');
                         scope.$apply();
@@ -73,12 +73,12 @@ playerDirectives.directive('resizableDraggable', [function () {
     };
 }]);
 
-playerDirectives.directive('userValidation', function() {
+playerDirectives.directive('userValidation', [function () {
     return {
         require: 'ngModel',
         restrict: 'A',
-        link: function(scope, elm, attrs, ctrl) {
-            ctrl.$parsers.unshift(function(username) {
+        link: function (scope, elm, attrs, ctrl) {
+            ctrl.$parsers.unshift(function (username) {
                 if (/^[a-zA-Zа-яА-Я0-9_-]{3,16}$/.test(username)) {
                     ctrl.$setValidity('username', true);
                     return username;
@@ -88,5 +88,5 @@ playerDirectives.directive('userValidation', function() {
                 }
             });
         }
-    };
-});
+    }
+}]);

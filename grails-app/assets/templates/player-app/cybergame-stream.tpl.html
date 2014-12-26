@@ -1,0 +1,4 @@
+<iframe id="frame{{currentComp.frames.indexOf(frame)}}" frameborder="0"
+        ng-src="{{trustSrc('http://api.cybergame.tv/p/embed.php?c='+frame.streamSource+'&w='+frame.width+'&h='+frame.height+'&type=embed')}}"
+        ng-style="{'left':frame.positionX, 'top':frame.positionY, 'position': 'absolute', 'width':frame.width, 'height':frame.height}">
+</iframe>
