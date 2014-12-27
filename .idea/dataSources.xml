@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3745598884">
+    <data-source source="LOCAL" name="AllPlayersTV dev" uuid="da762c5d-93af-4d28-a86d-40f14837f974">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://postgres-env-0088991.jelastic.regruhosting.ru/allstreams</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$MAVEN_REPOSITORY$/postgresql/postgresql/8.4-702.jdbc3/postgresql-8.4-702.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
