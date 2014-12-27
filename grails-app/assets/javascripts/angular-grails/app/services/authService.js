@@ -4,7 +4,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     //var serviceBase = 'http://localhost:8080/AllPlayersTV/';
     var authServiceFactory = {};
 
-    var contentType = "application/json;charset=UTF-8";
+    var contentType = 'application/json;charset=UTF-8';
 
     var _authentication = {
         isAuth: false,

@@ -174,14 +174,8 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            driverClassName = "com.mysql.jdbc.Driver"
-            dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
-
-            url = "jdbc:mysql://localhost:3306/allstreams?useUnicode=true&characterEncoding=utf-8"
-            username = "root"
-            password = "root"
-            logSql = true
+            dbCreate = "update"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
     test {
