@@ -1,12 +1,19 @@
 'use strict';
 
-playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService',
-    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService) {
+playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService', 'translitService',
+    function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService, translitService) {
         $scope.menuClass = 'showMenu';
 
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function (response) {
             $scope.fullJson = response;
+            if ($routeParams.comp != undefined) {
+                angular.forEach($scope.fullJson.user.compositions, function(value) {
+                    if (translitService.translit(value.name) === $routeParams.comp) {
+                        $scope.currentComp = value;
+                    }
+                });
+            }
         });
 
         $scope.editable = $scope.fullJson.isLogged;
@@ -33,6 +40,7 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
         };
 
         $scope.logIn = function () {
+            authService.clearRouteParams();
             $location.path("/login");
         };
 
@@ -120,10 +128,11 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 newComp.frames = [];
                 $scope.fullJson.user.compositions.push(newComp);
                 $scope.currentComp = newComp;
+                $scope.updateComp(newComp.name);
             });
         };
 
-        $scope.open = function () {
+        $scope.openModalAddFrame = function () {
             var scope = $rootScope.$new();
             scope.sources = $scope.fullJson.sources;
             scope.types = ['stream', 'chat'];
@@ -170,6 +179,10 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                 })
                 .error(function (data, status, headers, config) {
                 });
+        };
+
+        $scope.updateComp = function() {
+            translitService.changeLink($scope.currentComp.name);
         };
 
         $scope.renameComp = function () {

@@ -1,5 +1,5 @@
 'use strict';
-playerApp.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+playerApp.factory('authService', ['$http', '$q', '$location', 'localStorageService', function ($http, $q, $location, localStorageService) {
 
     //var serviceBase = 'http://localhost:8080/AllPlayersTV/';
     var authServiceFactory = {};
@@ -9,6 +9,10 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     var _authentication = {
         isAuth: false,
         userName : ""
+    };
+
+    var _clearRouteParams = function() {
+        $location.url($location.path());
     };
 
     var _saveRegistration = function (registration) {
@@ -65,6 +69,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
             _logOut();
             deferred.reject(err);
         });
+        _clearRouteParams();
 
         return deferred.promise;
 
@@ -85,6 +90,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
                 deferred.reject(err);
             });
         }
+        _clearRouteParams();
 
         return deferred.promise;
     };
@@ -105,6 +111,7 @@ playerApp.factory('authService', ['$http', '$q', 'localStorageService', function
     authServiceFactory.logOut = _logOut;
     authServiceFactory.fillAuthData = _fillAuthData;
     authServiceFactory.getFullJson = _getFullJson;
+    authServiceFactory.clearRouteParams = _clearRouteParams;
     authServiceFactory.authentication = _authentication;
 
     return authServiceFactory;

@@ -9,7 +9,7 @@
     <div id="buttons">
         <div id="deco">
             <button ng-show="currentComp != null" class="bt" ng-click="edit()">Edit</button>
-            <button ng-show="currentComp != null" class="bt" ng-click="open(fullJson.sources)">Add frame</button>
+            <button ng-show="currentComp != null" class="bt" ng-click="openModalAddFrame(fullJson.sources)">Add frame</button>
             <ANY ng-if="fullJson.canEdit == true">
                 <ANY ng-if="currentComp != null">
                     <button class="bt" ng-click="deleteComp()">Delete comp</button>
@@ -20,7 +20,8 @@
             </ANY>
             <label>Composition
                 <select ng-options="comp.name for comp in fullJson.user.compositions"
-                        ng-model="currentComp"></select>
+                        ng-model="currentComp"
+                        ng-change="updateComp()"></select>
             </label>
             <ANY ng-if="fullJson.isLogged == true">
                 <button ng-if="fullJson.canEdit == false && currentComp != null" class="bt" ng-click="copyComp()">Copy

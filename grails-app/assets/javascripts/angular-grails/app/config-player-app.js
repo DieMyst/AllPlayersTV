@@ -12,7 +12,8 @@ playerApp.config(['$routeProvider', '$httpProvider',
             }).
             when('/user/:login', {
                 templateUrl: 'frames.html',
-                controller: 'MainCtrl'
+                controller: 'MainCtrl',
+                reloadOnSearch: false
             }).
             otherwise({
                 redirectTo: '/login'
