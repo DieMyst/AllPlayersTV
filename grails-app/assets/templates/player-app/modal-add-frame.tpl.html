@@ -9,12 +9,19 @@
                         ng-options="source.source for source in sources track by source.value"
                         ng-model="newFrame.sourceType"></select>
             </label>
-            <label>Stream or chat
-                <select ng-init="newFrame.type = newFrame.type || options[0].value" ng-model="newFrame.type">
-                    <option value="stream" ng-if="newFrame.sourceType.stream == true">Stream</option>
-                    <option value="chat" ng-if="newFrame.sourceType.chat == true">Chat</option>
-                </select>
-            </label></div>
+            <div class="span1">
+                <div class="radio">
+                    <label ng-if="newFrame.sourceType.stream == true"><input type="radio" ng-model="newFrame.type"
+                                                                             value="stream">
+                        Stream </label>
+                </div>
+                <div class="radio">
+                    <label ng-if="newFrame.sourceType.chat == true"><input type="radio" ng-model="newFrame.type"
+                                                                           value="chat">
+                        Chat </label>
+                </div>
+            </div>
+        </div>
         <div class="right-modal">
             <span>{{newFrame.sourceType.hint}}</span>
         </div>
