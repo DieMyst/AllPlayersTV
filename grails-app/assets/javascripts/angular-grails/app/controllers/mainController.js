@@ -2,8 +2,6 @@
 
 playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routeParams', '$rootScope', '$http', '$location', 'authService', 'saveService', 'translitService',
     function ($scope, $sce, $modal, $log, $routeParams, $rootScope, $http, $location, authService, saveService, translitService) {
-        $scope.menuClass = 'showMenu';
-
         $scope.fullJson = "";
         authService.getFullJson($routeParams.login).then(function (response) {
             $scope.fullJson = response;
@@ -13,6 +11,15 @@ playerApp.controller('MainCtrl', ['$scope', '$sce', '$modal', '$log', '$routePar
                         $scope.currentComp = value;
                     }
                 });
+            }
+            if ($routeParams.hiddenMenu === "true") {
+                $scope.menuClass = 'hideMenu';
+                $('#deco').css("display", "none");
+                $scope.arrow = $scope.fullJson.menuarrow.arrowup
+            } else {
+                $scope.menuClass = 'showMenu';
+                $('#deco').css("display", "block");
+                $scope.arrow = $scope.fullJson.menuarrow.arrowdown
             }
         });
 
